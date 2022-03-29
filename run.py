@@ -1,7 +1,8 @@
 import time
 import random
 
-ef menu():
+
+def menu():
     """
     Opening screen to the game
     """
@@ -42,6 +43,12 @@ ef menu():
                 3. Enter your coordinates into the console to fire a shot. You will be notified of a hit or miss.
                 4. Player and computers selections will appear on their game board to avoid selecting the same coordinates and help narrow down where ships are located.
                 5. A winner is decalred when the players or computers fleet is destroyed.
+
+                Legend:
+                1. "." = water or empty space
+                2. "O" = part of ship
+                3. "X" = part of ship that was hit with bullet
+                4. "#" = water that was shot with bullet, a miss because it hit no ship
                 )
 
                 # if its p break the while loop and play the game
