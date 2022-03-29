@@ -1,3 +1,62 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+import time
+import random
+
+ef menu():
+    """
+    Opening screen to the game
+    """
+    clear_console()
+    print(
+        """
+ ______                 _            _     _            
+(____  \       _   _   | |          | |   (_)           
+ ____)  ) ____| |_| |_ | | ____  ___| | _  _ ____   ___ 
+|  __  ( / _  |  _)  _)| |/ _  )/___) || \| |  _ \ /___)
+| |__)  | ( | | |_| |__| ( (/ /|___ | | | | | | | |___ |
+|______/ \_||_|\___)___)_|\____|___/|_| |_|_| ||_/(___/ 
+                                            |_| 
+        
+\n
+"""
+    )
+
+    while True:
+        try:
+            how_to_play = input("Type p to play or h for how to play and press Enter:\n").upper()
+
+            #if the user selects how to play
+
+            if how_to_play == "H":
+                print(
+                    
+ _     _                                   _             
+| |   | |               _                 | |            
+| |__ | | ___  _ _ _   | |_  ___     ____ | | ____ _   _ 
+|  __)| |/ _ \| | | |  |  _)/ _ \   |  _ \| |/ _  | | | |
+| |   | | |_| | | | |  | |_| |_| |  | | | | ( ( | | |_| |
+|_|   |_|\___/ \____|   \___)___/   | ||_/|_|\_||_|\__  |
+                                    |_|           (____/ 
+
+                1. Please enter your name and press enter.
+                2. The game board is a 10 x 10 grid and each square in the grid will be repersented by number and letter(eg. a7, c2). The position of the ships on the player and computers board will be generated automatically.
+                3. Enter your coordinates into the console to fire a shot. You will be notified of a hit or miss.
+                4. Player and computers selections will appear on their game board to avoid selecting the same coordinates and help narrow down where ships are located.
+                5. A winner is decalred when the players or computers fleet is destroyed.
+                )
+
+                # if its p break the while loop and play the game
+            elif instruction == "P":
+                break
+            # raise an error if player doesn't select correct options
+            else:
+                raise ValueError()
+        # if there is an error prompt the user to of choices available
+        except (AttributeError, ValueError):
+            print(
+                    "Please type p to play or h for how to play and press Enter",
+            )
+    # User pressed on p
+clear_console()
+
+def main_screen
+
