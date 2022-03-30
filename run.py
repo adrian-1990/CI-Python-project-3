@@ -10,7 +10,6 @@ def menu():
     """
     Opening screen to the game
     """
-    clear_console()
     print(
         """
  ______                 _            _     _            
@@ -32,18 +31,17 @@ def menu():
             #if the user selects how to play
 
             if how_to_play == "H":
-                print(*** How to Play ***
+                print("""*** How to Play ***
                 1. Please enter your name and press enter.
                 2. The game board is a 10 x 10 grid and each square in the grid will be repersented by number and letter(eg. a7, c2). The position of the ships on the player and computers board will be generated automatically.
                 3. Enter your coordinates into the console to fire a shot. You will be notified of a hit or miss.
                 4. Player and computers selections will appear on their game board to avoid selecting the same coordinates and help narrow down where ships are located.
-                5. A winner is decalred when the players or computers fleet is destroyed.
-
+                5. A winner is decalred when the players or computers fleet is destroyed.\n
                 Legend:
-                1. "." = water or empty space
-                2. "O" = part of ship
-                3. "X" = part of ship that was hit with bullet
-                4. "#" = water that was shot with bullet, a miss because it hit no ship
+                1. '.' = water or empty space
+                2. 'O' = part of ship
+                3. 'X' = part of ship that was hit with bullet
+                4. '#' = water that was shot with bullet, a miss because it hit no ship.\n"""
                 )
 
                 # if its p break the while loop and play the game
@@ -57,19 +55,3 @@ def menu():
             print(
                     "Please type p to play or h for how to play and press Enter",
             )
-    # User pressed on p
-clear_console()
-
-def username_input():
-    """
-    Input takes the name of the user for game personalisation
-    """
-    print("What is your name:")
-    while True:
-        username = input("Please enter your name: ")
-        if name_check(username):
-            break
-    print("Prepare for the game " + username + "!")
-    print("")
-    return username
-
