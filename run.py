@@ -61,5 +61,16 @@ def menu():
     # User pressed on p
 clear_console()
 
-def main_screen
+def username_input():
+    """
+    Input takes the name of the user for game personalisation
+    """
+    print("What is your name:")
+    while True:
+        username = input("Please enter your name: ")
+        if name_check(username):
+            break
+    print("Prepare for the game " + username + "!")
+    print("")
+    return username
 
