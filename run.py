@@ -1,5 +1,7 @@
 import time
 import random
+import create_grid from board
+import print_grid from board
 
 
 def menu():
@@ -29,15 +31,7 @@ def menu():
 
             if how_to_play == "H":
                 print(
-                    
- _     _                                   _             
-| |   | |               _                 | |            
-| |__ | | ___  _ _ _   | |_  ___     ____ | | ____ _   _ 
-|  __)| |/ _ \| | | |  |  _)/ _ \   |  _ \| |/ _  | | | |
-| |   | | |_| | | | |  | |_| |_| |  | | | | ( ( | | |_| |
-|_|   |_|\___/ \____|   \___)___/   | ||_/|_|\_||_|\__  |
-                                    |_|           (____/ 
-
+                *** How to Play ***
                 1. Please enter your name and press enter.
                 2. The game board is a 10 x 10 grid and each square in the grid will be repersented by number and letter(eg. a7, c2). The position of the ships on the player and computers board will be generated automatically.
                 3. Enter your coordinates into the console to fire a shot. You will be notified of a hit or miss.
