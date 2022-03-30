@@ -52,6 +52,33 @@ def create_grid():
         if try_to_place_ship_on_grid(random_row, random_col, direction, ship_size):
             num_of_ships_placed += 1
 
+def try_to_place_ship_on_grid(row, col, direction, length):
+    """Based on direction will call helper method to try and place a ship on the grid"""
+    global grid_size
+
+    start_row, end_row, start_col, end_col = row, row + 1, col, col + 1
+    if direction == "left":
+        if col - length < 0:
+            return False
+        start_col = col - length + 1
+
+    elif direction == "right":
+        if col + length >= grid_size:
+            return False
+        end_col = col + length
+
+    elif direction == "up":
+        if row - length < 0:
+            return False
+        start_row = row - length + 1
+
+    elif direction == "down":
+        if row + length >= grid_size:
+            return False
+        end_row = row + length
+
+    return validate_grid_and_place_ship(start_row, end_row, start_col, end_col)
+
 def print_grid():
     """Will print the grid with rows A-J and columns 0-9"""
     global grid
