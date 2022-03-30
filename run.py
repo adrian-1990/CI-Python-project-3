@@ -3,6 +3,7 @@ import random
 import create_grid from board
 import print_grid from board
 import Ship from ship
+import clear_console from clear
 
 
 def menu():
