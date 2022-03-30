@@ -2,7 +2,7 @@ import time
 import random
 import create_grid from board
 import print_grid from board
-from ships import Ship
+import Ship import ship
 
 
 def menu():
