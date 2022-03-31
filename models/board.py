@@ -1,5 +1,5 @@
 import random
-from ship import Ship
+from .ship import Ship
 
 """
 Code to create_grid was taken from Pythondex
