@@ -29,6 +29,7 @@ def menu():
             #if the user selects how to play
 
             if user_prompt == "I":
+                clear_console()
                 print("""
 *** How to Play ***\n
 1. Please enter your name and press enter.
@@ -46,9 +47,11 @@ Legend:\n
 
                 # if its p break the while loop and play the game
             elif user_prompt == "P":
+                clear_console()
                 user_name = input(
                     "Please enter your name:\n"
                 ).upper()
+                clear_console()
                 break
             # raise an error if player doesn't select correct options
             else:
