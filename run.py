@@ -1,7 +1,6 @@
 import time
 import random
-from board import create_grid
-from board import print_grid
+from board import create_grid, print_grid
 from ship import Ship
 from clear import clear_console
 
@@ -26,11 +25,11 @@ def menu():
 
     while True:
         try:
-            how_to_play = input("Type p to play or h for how to play and press Enter:\n").upper()
+            user_prompt = input("Type p to play or h for how to play and press Enter:\n").upper()
 
             #if the user selects how to play
 
-            if how_to_play == "H":
+            if user_prompt == "H":
                 print("""*** How to Play ***
                 1. Please enter your name and press enter.
                 2. The game board is a 10 x 10 grid and each square in the grid will be repersented by number and letter(eg. a7, c2). The position of the ships on the player and computers board will be generated automatically.
@@ -45,7 +44,7 @@ def menu():
                 )
 
                 # if its p break the while loop and play the game
-            elif instruction == "P":
+            elif user_prompt == "P":
                 break
             # raise an error if player doesn't select correct options
             else:
@@ -55,3 +54,5 @@ def menu():
             print(
                     "Please type p to play or h for how to play and press Enter",
             )
+
+menu()
