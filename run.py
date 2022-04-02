@@ -52,6 +52,14 @@ Legend:\n
                     "Please enter your name:\n"
                 ).upper()
                 clear_console()
+                print("Welcome " + user_name + ", the game is about to begin...\n")
+                time.sleep(2)
+                print("Players board loading...\n")
+                time.sleep(2)
+                print("Computers board loading...\n")
+                time.sleep(2)
+                print("Boards loaded, enjoy the game...\n")
+                time.sleep(2)
                 break
             # raise an error if player doesn't select correct options
             else:
