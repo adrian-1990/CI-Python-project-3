@@ -4,7 +4,7 @@ from models import board
 from utils import clear_console
 
 
-def menu():
+def welcome_screen():
     """
     Opening screen to the game
     """
@@ -70,4 +70,4 @@ Legend:\n
                     "Please type p to play or h for how to play and press Enter",
             )
 
-menu()
+welcome_screen()
