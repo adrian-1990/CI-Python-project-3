@@ -10,11 +10,29 @@ Patrol Boat
 """
 
 class Ship:
+    
+    hit_count = 0
+    num_of_ships = 0
 
     def __init__(self, name, symbol, length):
         self.name = name
         self.symbol = symbol
         self.length = length
+
+    def get_name(self):
+        return self.name
+
+    def get_symbol(self):
+        return self.symbol
+
+    def get_length(self):
+        return self.length
+
+    def increment_hit_counter(self):
+        self.hit_count += 1
+
+    def get_flotation_status(self):
+        return False if self.hit_count == self.get_length() else True
 
 
 """

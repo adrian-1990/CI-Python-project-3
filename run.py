@@ -1,6 +1,6 @@
 import time
 import random
-from models import board
+from models.board import print_board, board
 from utils import clear_console
 
 
@@ -8,6 +8,7 @@ def welcome_screen():
     """
     Opening screen to the game
     """
+    clear_console()
     print(
         """
  ______                 _            _     _            
@@ -70,4 +71,9 @@ Legend:\n
                     "Please type p to play or h for how to play and press Enter",
             )
 
-welcome_screen()
+class game:
+    welcome_screen()
+    clear_console()
+    print_board(board)
+
+game()
