@@ -10,9 +10,6 @@ Patrol Boat
 """
 
 class Ship:
-    
-    hit_count = 0
-    num_of_ships = 0
 
     def __init__(self, name, symbol, length):
         self.name = name
