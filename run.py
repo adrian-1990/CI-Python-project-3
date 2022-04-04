@@ -1,6 +1,6 @@
 import time
 import random
-from models.board import print_board, board, validate_grid_and_place_ship, place_ships
+from models.board import print_board, board, validate_grid_and_place_ship, place_ships,
 from utils import clear_console
 
 
@@ -74,7 +74,7 @@ Legend:\n
 class game:
     welcome_screen()
     clear_console()
-    place_ships
+    place_ships()
     validate_grid_and_place_ship(0, 0, 0, 0)
     print_board(board)
 
