@@ -41,8 +41,7 @@ class validate_coordinates():
         what qualifies as a valid input
         """
         new_guess = input("You input is invalid. Please use two "
-                          "numbers between 0 and 9 (row then column)\n"
-                          "i.e 4,5 or 45: \n").strip(" ")
+                          "numbers between 0 and 9 (row then column)\n")
         return new_guess
 
 

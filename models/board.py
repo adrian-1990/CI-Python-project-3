@@ -1,7 +1,7 @@
 import random
 import time
-from .ship import Ship, GameFleet
-from utils import clear_console
+from .ship import Ship
+from utils import clear_console, validate_coordinates
 
 """
 The code for creating the players board was used after
