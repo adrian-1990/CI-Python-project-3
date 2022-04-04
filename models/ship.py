@@ -90,3 +90,10 @@ class GameFleet(Fleet):
         self.ship3 = Destroyer()
         self.ship4 = Submarine()
         self.ship5 = PatrolBoat()
+        self.fleet = [
+            self.ship1,
+            self.ship2,
+            self.ship3,
+            self.ship4,
+            self.ship5
+        ]
