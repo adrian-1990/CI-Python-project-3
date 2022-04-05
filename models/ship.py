@@ -13,9 +13,8 @@ SHIPS_LENGTH = [2, 3, 3, 4, 5]
 
 class Ship:
 
-    def __init__(self, name, symbol, length):
+    def __init__(self, name, length):
         self.name = name
-        self.symbol = symbol
         self.length = length
 
     def get_name(self):
@@ -26,13 +25,6 @@ class Ship:
 
     def get_length(self):
         return self.length
-
-    def increment_hit_counter(self):
-        self.hit_count += 1
-
-    def get_flotation_status(self):
-        return False if self.hit_count == self.get_length() else True
-
 
 """
 Creates a class for each ship

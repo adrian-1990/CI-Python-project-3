@@ -32,10 +32,6 @@ def print_board(board):
         print("%d|%s|" % (row_number, "|".join(row)))
         row_number += 1
 
-"""
-New code
-"""
-
 def place_ship(board):
     """
     The place ship function loops throught the lengths of the ships and then
@@ -122,7 +118,7 @@ def user_input(place_ship):
     if place_ship == True:
         while True:
             try:
-                orientation = input("Do you want to place the ship horizontal or vertical: \n").upper()
+                orientation = input("Do you want to place the ship horizontal(H) or vertical(V): \n").upper()
                 if orientation == "H" or orientation == "V":
                     break
                 else:
@@ -222,7 +218,8 @@ def play_game():
     # Computer places ships
     place_ship(COMPUTER_BOARD)
     # Computer board displayed
-    # print_board(COMPUTER_BOARD)
+    
+    #print_board(COMPUTER_BOARD)
     # Player board displayed
     print_board(PLAYER_BOARD)
     # Player places ships
@@ -234,7 +231,7 @@ def play_game():
             print('GUESS A BATTLESHIP LOCATION CAPTAIN!\n')
             print_board(PLAYER_GUESS_BOARD)
             turn(PLAYER_GUESS_BOARD)
-            time.sleep(2)
+            time.sleep(1)
             break
         if hit_count(PLAYER_GUESS_BOARD) == 17:
             print("\u001b[32mYOU WON!\u001b[0m, BRILLIANT SHOOTING CAPTAIN")
