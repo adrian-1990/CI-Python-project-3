@@ -23,18 +23,14 @@ letters_to_numbers = {
             "J": 9,
         }
 
-class GameBoard:
-    def __init__(self, board):
-        self.board = board
-        
-    # creates the players game board
-    def print_board(self):
-        print("  A B C D E F G H I J")
-        print("  +-+-+-+-+-+-+-+-+-+")
-        row_number = 1
-        for row in self.board:
-            print("%d|%s|" % (row_number, "|".join(row)))
-            row_number += 1
+# creates the players game board
+def print_board(board):
+    print("  A B C D E F G H I J")
+    print("  +-+-+-+-+-+-+-+-+-+")
+    row_number = 1
+    for row in board:
+        print("%d|%s|" % (row_number, "|".join(row)))
+        row_number += 1
 
 """
 New code
@@ -83,7 +79,7 @@ def place_ship(board):
                         else:
                             for i in range(row, row + ship_length):
                                 board[i][column] = "O"
-                        GameBoard(PLAYER_BOARD)
+                        print_board(PLAYER_BOARD)
                         break
 
 
@@ -228,7 +224,7 @@ def play_game():
     # Computer board displayed
     # print_board(COMPUTER_BOARD)
     # Player board displayed
-    GameBoard(PLAYER_BOARD)
+    print_board(PLAYER_BOARD)
     # Player places ships
     place_ship(PLAYER_BOARD)
 
@@ -236,7 +232,7 @@ def play_game():
         # Player turn
         while True:
             print('GUESS A BATTLESHIP LOCATION CAPTAIN!\n')
-            GameBoard(PLAYER_GUESS_BOARD)
+            print_board(PLAYER_GUESS_BOARD)
             turn(PLAYER_GUESS_BOARD)
             time.sleep(2)
             break
@@ -248,7 +244,7 @@ def play_game():
             turn(COMPUTER_GUESS_BOARD)
             time.sleep(1)
             break
-        GameBoard(COMPUTER_GUESS_BOARD)
+        print_board(COMPUTER_GUESS_BOARD)
         if hit_count(COMPUTER_GUESS_BOARD) == 17:
             print(
                 "UNLUCKY \u001b[31mYOU LOSE\u001b[0m CAPTAIN, WE WILL GET THEM \
