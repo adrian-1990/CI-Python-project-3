@@ -23,13 +23,13 @@ class GameBoard:
         }
         return letters_to_numbers
 
-def print_board(self):
-    print("  A B C D E F G H")
-    print("  +-+-+-+-+-+-+-+")
-    row_number = 1
-    for row in self.board:
-        print("%d|%s|" % (row_number, "|".join(row)))
-        row_number += 1
+    def print_board(self):
+        print("  A B C D E F G H")
+        print("  +-+-+-+-+-+-+-+")
+        row_number = 1
+        for row in self.board:
+            print("%d|%s|" % (row_number, "|".join(row)))
+            row_number += 1
 
 
 class build_board:
@@ -39,9 +39,9 @@ class build_board:
     def create_ships(self):
         for i in range(5):
             self.x_row, self.y_column = random.randint(0, 10), random.randint(0, 10)
-            while self.board[self.x_row][self.y_column] == "O":
+            while self.board[self.x_row][self.y_column] == "X":
                 self.x_row, self.y_column = random.randint(0, 10), random.randint(0, 10)
-            self.board[self.x_row][self.y_column] = "O"
+            self.board[self.x_row][self.y_column] = "X"
         return self.board
 
     def get_user_input(self):
@@ -69,9 +69,9 @@ class build_board:
 
 def RunGame():
 
-    computer_board = GameBoard([[" "] * 8 for i in range(8)])
-    user_guess_board = GameBoard([[" "] * 8 for i in range(8)])
-    Ship.create_ships(computer_board)
+    computer_board = GameBoard([[" "] * 10 for i in range(10)])
+    user_guess_board = GameBoard([[" "] * 10 for i in range(10)])
+    build_board.create_ships(computer_board)
     bullets = 50
     while bullets > 0:
       GameBoard.print_board(user_guess_board)
@@ -82,9 +82,9 @@ def RunGame():
           print("You guessed that already, try again")
           user_x_row, user_y_column = build_board.get_user_input(object)
       # check for hit or miss
-    if computer_board.board[user_x_row][user_y_column] == "O":
+    if computer_board.board[user_x_row][user_y_column] == "X":
         print("You sunk 1 of my battleship!")
-        user_guess_board.board[user_x_row][user_y_column] = "O"
+        user_guess_board.board[user_x_row][user_y_column] = "X"
     else:
           print("You missed")
           user_guess_board.board[user_x_row][user_y_column] = "O"
