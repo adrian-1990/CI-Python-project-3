@@ -1,7 +1,6 @@
 import time
 import random
-from models.ship import Ship
-from models.board import GameBoard,, RunGame
+from models.board import play_game
 from utils import clear_console
 
 
@@ -75,38 +74,6 @@ Legend:\n
 class Game:
     welcome_screen()
     clear_console()
-
-    # Computer places ships
-    place_ship(COMPUTER_BOARD)
-    # Computer board displayed
-    # print_board(COMPUTER_BOARD)
-    # Player board displayed
-    print_board(PLAYER_BOARD)
-    # Player places ships
-    place_ship(PLAYER_BOARD)
-
-    while True:
-        # Player turn
-        while True:
-            print(PHASE)
-            print('GUESS A BATTLESHIP LOCATION CAPTAIN!\n')
-            print_board(PLAYER_GUESS_BOARD)
-            turn(PLAYER_GUESS_BOARD)
-            time.sleep(2)
-            break
-        if hit_count(PLAYER_GUESS_BOARD) == 17:
-            print("\u001b[32mYOU WON!\u001b[0m, BRILLIANT SHOOTING CAPTAIN")
-            break
-        # Computer turn
-        while True:
-            turn(COMPUTER_GUESS_BOARD)
-            time.sleep(2)
-            break
-        print_board(COMPUTER_GUESS_BOARD)
-        if hit_count(COMPUTER_GUESS_BOARD) == 17:
-            print(
-                "UNLUCKY \u001b[31mYOU LOSE\u001b[0m CAPTAIN, WE WILL GET THEM \
-                NEXT TIME")
-            break
+    play_game()
 
 Game()
