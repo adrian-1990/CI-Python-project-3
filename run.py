@@ -1,7 +1,7 @@
 import time
 import random
 from models.ship import Ship
-from models.board import GameBoard, build_board, create_ships
+from models.board import GameBoard, build_board, RunGame
 from utils import clear_console
 
 
@@ -72,37 +72,6 @@ Legend:\n
                     "Please type p to play or h for how to play and press Enter",
             )
             
-def RunGame():
-
-    computer_board = GameBoard([[" "] * 8 for i in range(8)])
-    user_guess_board = GameBoard([[" "] * 8 for i in range(8)])
-    Ship.create_ships(computer_board)
-    bullets = 50
-    while bullets > 0:
-      GameBoard.print_board(user_guess_board)
-      # get user import
-      user_x_row, user_y_column = build_board.get_user_input(object)
-      # check if guesses duplicated
-      while user_guess_board.board[user_x_row][user_y_column] == "-" or user_guess_board.board[user_x_row][user_y_column] == "O":
-          print("You guessed that already, try again")
-          user_x_row, user_y_column = build_board.get_user_input(object)
-      # check for hit or miss
-    if computer_board.board[user_x_row][user_y_column] == "O":
-        print("You sunk 1 of my battleship!")
-        user_guess_board.board[user_x_row][user_y_column] = "O"
-    else:
-          print("You missed")
-          user_guess_board.board[user_x_row][user_y_column] = "O"
-      # Check if you won or lost the game
-    if Battleship.count_hit_ships(user_guess_board) == 5:
-        print("You have sunk all my battleships")
-    else:
-        bullets -= 1
-        print(f"You have {bullets} remaining")
-        if bullets == 0:
-            print("You are all out of bullets")
-            GameBoard.print_board(user_guess_board)
-
 class Game:
     welcome_screen()
     clear_console()

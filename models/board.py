@@ -9,7 +9,7 @@ class GameBoard:
         self.board = board
 
     def get_letters_to_numbers():
-        return {
+        letters_to_numbers = {
             "A": 0,
             "B": 1,
             "C": 2,
@@ -21,14 +21,15 @@ class GameBoard:
             "I": 8,
             "J": 9,
         }
+        return letters_to_numbers
 
-    def print_board(self):
-        print("  A B C D E F G H")
-        print("  +-+-+-+-+-+-+-+")
-        row_number = 1
-        for row in self.board:
-            print("%d|%s|" % (row_number, "|".join(row)))
-            row_number += 1
+def print_board(self):
+    print("  A B C D E F G H")
+    print("  +-+-+-+-+-+-+-+")
+    row_number = 1
+    for row in self.board:
+        print("%d|%s|" % (row_number, "|".join(row)))
+        row_number += 1
 
 
 class build_board:
@@ -64,5 +65,35 @@ class build_board:
             for column in row:
                 if column == "X":
                     hit_ships += 1
+                return hit_ships
 
+def RunGame():
 
+    computer_board = GameBoard([[" "] * 8 for i in range(8)])
+    user_guess_board = GameBoard([[" "] * 8 for i in range(8)])
+    Ship.create_ships(computer_board)
+    bullets = 50
+    while bullets > 0:
+      GameBoard.print_board(user_guess_board)
+      # get user import
+      user_x_row, user_y_column = build_board.get_user_input(object)
+      # check if guesses duplicated
+      while user_guess_board.board[user_x_row][user_y_column] == "-" or user_guess_board.board[user_x_row][user_y_column] == "O":
+          print("You guessed that already, try again")
+          user_x_row, user_y_column = build_board.get_user_input(object)
+      # check for hit or miss
+    if computer_board.board[user_x_row][user_y_column] == "O":
+        print("You sunk 1 of my battleship!")
+        user_guess_board.board[user_x_row][user_y_column] = "O"
+    else:
+          print("You missed")
+          user_guess_board.board[user_x_row][user_y_column] = "O"
+      # Check if you won or lost the game
+    if Battleship.count_hit_ships(user_guess_board) == 5:
+        print("You have sunk all my battleships")
+    else:
+        bullets -= 1
+        print(f"You have {bullets} remaining")
+        if bullets == 0:
+            print("You are all out of bullets")
+            GameBoard.print_board(user_guess_board)
