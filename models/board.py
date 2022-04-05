@@ -8,7 +8,7 @@ COMPUTER_BOARD = [[" "] * 10 for i in range(10)]
 PLAYER_GUESS_BOARD = [[" "] * 10 for i in range(10)]
 COMPUTER_GUESS_BOARD = [[" "] * 10 for i in range(10)]
 
-SHIPS_LENGTH = [2, 3, 3, 4, 5]
+SHIPS_LENGTHS = [2, 3, 3, 4, 5]
 
 class GameBoard:
     def __init__(self, board):
