@@ -8,6 +8,8 @@ Desrtoyer
 Submarine
 Patrol Boat
 """
+# The length of each ship
+SHIPS_LENGTH = [2, 3, 3, 4, 5]
 
 class Ship:
 
