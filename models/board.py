@@ -10,12 +10,7 @@ COMPUTER_GUESS_BOARD = [[" "] * 10 for i in range(10)]
 
 SHIPS_LENGTHS = [2, 3, 3, 4, 5]
 
-class GameBoard:
-    def __init__(self, board):
-        self.board = board
-
-    def get_letters_to_numbers():
-        letters_to_numbers = {
+letters_to_numbers = {
             "A": 0,
             "B": 1,
             "C": 2,
@@ -27,7 +22,11 @@ class GameBoard:
             "I": 8,
             "J": 9,
         }
-        return letters_to_numbers
+
+class GameBoard:
+    def __init__(self, board):
+        self.board = board
+        
     # creates the players game board
     def print_board(self):
         print("  A B C D E F G H I J")
@@ -74,10 +73,8 @@ def place_ship(board):
                     # check if ship overlaps
                     if ship_overlap(board, row, column, orientation,
                                     ship_length):
-                        print(PHASE)
                         print("THE SHIP DOSENT FIT HERE \n")
                     else:
-                        print(PHASE)
                         print("EXCELLENT POSITIONING OF THE SHIP \n")
                         # place ship
                         if orientation == "H":
@@ -86,7 +83,7 @@ def place_ship(board):
                         else:
                             for i in range(row, row + ship_length):
                                 board[i][column] = "O"
-                        print_board(PLAYER_BOARD)
+                        GameBoard(PLAYER_BOARD)
                         break
 
 
@@ -174,7 +171,7 @@ def user_input(place_ship):
                 if column not in 'ABCDEFGH':
                     print("Please enter a valid letter between A-J")
                 else:
-                    column = letters_conversion[column]
+                    column = letters_to_numbers[column]
                     break
             except KeyError:
                 print("Please enter a valid letter between A-J")
@@ -238,9 +235,8 @@ def play_game():
     while True:
         # Player turn
         while True:
-            print(PHASE)
             print('GUESS A BATTLESHIP LOCATION CAPTAIN!\n')
-            print_board(PLAYER_GUESS_BOARD)
+            GameBoard(PLAYER_GUESS_BOARD)
             turn(PLAYER_GUESS_BOARD)
             time.sleep(2)
             break
@@ -252,7 +248,7 @@ def play_game():
             turn(COMPUTER_GUESS_BOARD)
             time.sleep(1)
             break
-        print_board(COMPUTER_GUESS_BOARD)
+        GameBoard(COMPUTER_GUESS_BOARD)
         if hit_count(COMPUTER_GUESS_BOARD) == 17:
             print(
                 "UNLUCKY \u001b[31mYOU LOSE\u001b[0m CAPTAIN, WE WILL GET THEM \
