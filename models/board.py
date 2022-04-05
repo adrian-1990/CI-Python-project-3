@@ -138,7 +138,7 @@ def user_input(place_ship):
                 print("Please enter a valid orientaion (H or V)")
         while True:
             try:
-                row = input("Enter the row of the ship 1-8: \n")
+                row = input("Enter the row of the ship 0-9: \n")
                 if row in '0123456789':
                     row = int(row) - 1
                     break
@@ -152,7 +152,7 @@ def user_input(place_ship):
                 if column not in 'ABCDEFGHIJ':
                     print("Please enter a valid letter between A-J")
                 else:
-                    column = letters_conversion[column]
+                    column = letters_to_numbers[column]
                     break
             except KeyError:
                 print("Please enter a valid letter between A-J")
@@ -231,7 +231,7 @@ def play_game():
     # Computer board displayed
     # print_board(COMPUTER_BOARD)
     # Player board displayed
-    print_board(PLAYER_BOARD)
+    GameBoard(PLAYER_BOARD)
     # Player places ships
     place_ship(PLAYER_BOARD)
 
