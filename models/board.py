@@ -122,7 +122,7 @@ def user_input(place_ship):
     if place_ship == True:
         while True:
             try:
-                orientation = input("Enter orientation (H or V): \n").upper()
+                orientation = input("Do you want to place the ship horizontal or vertical: \n").upper()
                 if orientation == "H" or orientation == "V":
                     break
                 else:
@@ -164,7 +164,7 @@ def user_input(place_ship):
         while True:
             try:
                 column = input("Enter the column of the ship A-J: \n").upper()
-                if column not in 'ABCDEFGH':
+                if column not in 'ABCDEFGHIJ':
                     print("Please enter a valid letter between A-J")
                 else:
                     column = letters_to_numbers[column]
