@@ -25,7 +25,7 @@ def welcome_screen():
 
     while True:
         try:
-            user_prompt = input("Type p to play or i for instructions and press Enter:\n").upper()
+            user_prompt = input("Type p to play or i for instructions and press Enter: \n").upper()
 
             #if the user selects how to play
 
@@ -35,10 +35,11 @@ def welcome_screen():
 *** How to Play ***\n
 1. Please enter your name and press enter.
 2. The game board is a 10 x 10 grid and each square in the grid will be repersented by number and letter(eg. a7, c2). 
-3. The position of the ships on the player and computers board will be generated automatically.
-4. Enter your coordinates into the console to fire a shot. You will be notified of a hit or miss.
-5. Player and computers selections will appear on their game board to avoid selecting the same coordinates and help narrow down where ships are located.
-6. A winner is decalred when the players or computers fleet is destroyed.\n
+3. Each players fleet consists of 5 vessels. These length of the ships are based on the Battleship board game.
+4. The player must position the location of their ships, the computers board will be generated automatically.
+5. Enter your coordinates into the console to fire a shot. You will be notified of a hit or miss.
+6. Player and computers selections will appear on their game board to avoid selecting the same coordinates and help narrow down where ships are located.
+7. A winner is decalred when the players or computers fleet is destroyed.\n
 Legend:\n
 1. '.' = water or empty space
 2. 'O' = part of ship
@@ -48,19 +49,6 @@ Legend:\n
 
                 # if its p break the while loop and play the game
             elif user_prompt == "P":
-                clear_console()
-                user_name = input(
-                    "Please enter your name:\n"
-                ).upper()
-                clear_console()
-                print("Welcome " + user_name + ", the game is about to begin...\n")
-                time.sleep(2)
-                print("Players board loading...\n")
-                time.sleep(2)
-                print("Computers board loading...\n")
-                time.sleep(2)
-                print("Boards loaded, enjoy the game...\n")
-                time.sleep(2)
                 break
             # raise an error if player doesn't select correct options
             else:
@@ -70,10 +58,29 @@ Legend:\n
             print(
                     "Please type p to play or h for how to play and press Enter",
             )
+
+def name_input():
+    clear_console()
+    user_name = input(
+        "Please enter your name:\n"
+        ).upper()
+        if user_name == "computer":
+            print("That is my name human!!! Please enter your own name: \n")
+        elif len(name_input) == 0:
+            print("I appreciate the secrecy but I must know your name...")
+            
+        print("Welcome " + user_name + ", the game is about to begin...\n")
+        time.sleep(1)
+        print("This is based on the classic Battlefield board game\n")
+        time.sleep(1)
+        print("You must first place your ships, make sure to choose well as we don't want your fleet to be sunk...\n")
+        time.sleep(1)
+        print("Computers board is loaded, hope you enjoy the game...\n")
+        time.sleep(1)
             
 class Game:
     welcome_screen()
-    clear_console()
+    name_input()
     play_game()
 
 Game()

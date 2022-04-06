@@ -3,7 +3,7 @@ import time
 from .ship import Ship
 from utils import clear_console
 """
-For creating the code for the game board and logic 
+For creating the code for the game board and logic, 
 I used the below sites for reference:
 
 Pythondex
@@ -22,7 +22,12 @@ PLAYER_GUESS_BOARD = [[" "] * 10 for i in range(10)]
 COMPUTER_GUESS_BOARD = [[" "] * 10 for i in range(10)]
 """
 Ships length to be accessed in place_ships
-Length of ships taken from board game
+Length of ships were taken from the board game
+Carrier : 5
+Battleship : 4
+Destroyer : 3
+Submarine : 3
+Patrolboat : 2
 """
 SHIPS_LENGTHS = [2, 3, 3, 4, 5]
 
@@ -75,15 +80,15 @@ def place_ship(board):
                         break
             else:
                 place_ship = True
-                print('Place the ship with a length of ' + str(ship_length))
+                print('Place ship with a length of ' + str(ship_length))
                 row, column, orientation = user_input(place_ship)
                 if fit_ship_check(ship_length, row, column, orientation):
                     # check if ship overlaps
                     if ship_overlap(board, row, column, orientation,
                                     ship_length):
-                        print("THE SHIP DOSENT FIT HERE \n")
+                        print("Your ship doesn't fit there, please try a differant location... \n")
                     else:
-                        print("EXCELLENT POSITIONING OF THE SHIP \n")
+                        print("Ship placed, lets place your next vessel... \n")
                         # place ship
                         if orientation == "H":
                             for i in range(column, column + ship_length):
@@ -211,10 +216,10 @@ def turn(board):
             turn(board)
         elif COMPUTER_BOARD[row][column] == "O":
             board[row][column] = "X"
-            print("WE HIT THEM, GREAT SHOT CAPTAIN")
+            print("It's a hit, keep it up and we will soon have their fleet sunk!!")
         else:
             board[row][column] = "#"
-            print("WE MISSED, WE WILL GET THEM ON THE NEXT SHOT")
+            print("We missed, all we hit was water on that shot!!")
     else:
         row, column = random.randint(0, 9), random.randint(0, 9)
         if board[row][column] == ".":
@@ -223,11 +228,11 @@ def turn(board):
             turn(board)
         elif PLAYER_BOARD[row][column] == "O":
             board[row][column] = "X"
-            print("WE ARE HIT, FIRE BACK!")
+            print("W are hit, the enemy has struck one of our ships")
             print("COMPUTERS BOARD \n")
         else:
             board[row][column] = "-"
-            print("THE COMPUTER MISSED, PHEW...\n")
+            print("The enemy has missed, let's continue our assault\n")
             print("COMPUTERS BOARD \n")
 
 def play_game():
@@ -243,13 +248,13 @@ def play_game():
     while True:
         # Player turn
         while True:
-            print('GUESS A BATTLESHIP LOCATION CAPTAIN!\n')
+            print('Enter a location fo rus to attack...\n')
             print_board(PLAYER_GUESS_BOARD)
             turn(PLAYER_GUESS_BOARD)
             time.sleep(1)
             break
         if hit_count(PLAYER_GUESS_BOARD) == 17:
-            print("\u001b[32mYOU WON!\u001b[0m, BRILLIANT SHOOTING CAPTAIN")
+            print("WE HAVE WON!!! The enemy's fleet is lying on the ocean floor.")
             break
         # Computer turn
         while True:
@@ -259,6 +264,6 @@ def play_game():
         print_board(COMPUTER_GUESS_BOARD)
         if hit_count(COMPUTER_GUESS_BOARD) == 17:
             print(
-                "UNLUCKY \u001b[31mYOU LOSE\u001b[0m CAPTAIN, WE WILL GET THEM \
-                NEXT TIME")
+                "YOU HAVE LOST!!\n"
+                "Your fleet has been destroyed, as Captain of the ship you must go down with the ship...")
             break
