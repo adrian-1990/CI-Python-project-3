@@ -3,6 +3,17 @@ import time
 from .ship import Ship
 from utils import clear_console
 """
+For creating the code for the game board and logic 
+I used the below sites for reference:
+
+Pythondex
+URL: https://pythondex.com/python-battleship-game
+
+How to code Battlefield game in Python Youtube video:
+https://www.youtube.com/watch?v=tF1WRCrd_HQ
+"""
+
+"""
 Creates all the boards required for the game
 """
 PLAYER_BOARD = [[" "] * 10 for i in range(10)]
