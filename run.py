@@ -25,13 +25,16 @@ def welcome_screen():
 
     while True:
         try:
-            user_prompt = input("Type p to play or i for instructions and press Enter: \n").upper()
+            user_prompt = input(
+                "Type p to play or i for instructions and press Enter: \n"
+            ).upper()
 
-            #if the user selects how to play
+            # if the user selects how to play
 
             if user_prompt == "I":
                 clear_console()
-                print("""
+                print(
+                    """
 *** How to Play ***\n
 1. Please enter your name and press enter.
 2. The game board is a 10 x 10 grid and each square in the grid will be repersented by number and letter(eg. a7, c2). 
@@ -56,31 +59,35 @@ Legend:\n
         # if there is an error prompt the user to of choices available
         except (AttributeError, ValueError):
             print(
-                    "Please type p to play or h for how to play and press Enter",
+                "Please type p to play or h for how to play and press Enter",
             )
+
 
 def name_input():
     clear_console()
-    user_name = input(
-        "Please enter your name:\n"
-        ).upper()
-        if user_name == "computer":
-            print("That is my name human!!! Please enter your own name: \n")
-        elif len(name_input) == 0:
-            print("I appreciate the secrecy but I must know your name...")
-            
-        print("Welcome " + user_name + ", the game is about to begin...\n")
-        time.sleep(1)
-        print("This is based on the classic Battlefield board game\n")
-        time.sleep(1)
-        print("You must first place your ships, make sure to choose well as we don't want your fleet to be sunk...\n")
-        time.sleep(1)
-        print("Computers board is loaded, hope you enjoy the game...\n")
-        time.sleep(1)
-            
+    user_name = input("Please enter your name:\n").upper()
+    if user_name.lower() == "computer":
+        print("That is my name human!!! Please enter your own name: \n")
+        user_name = input("Please enter your name:\n").upper()
+    elif len(user_name) == 0:
+        print("I appreciate the secrecy but I must know your name...")
+        user_name = input("Please enter your name:\n").upper()
+    print("Welcome " + user_name + ", the game is about to begin...\n")
+    time.sleep(2)
+    print("This is based on the classic Battlefield board game\n")
+    time.sleep(2)
+    print(
+        "You must first place your ships, make sure to choose well as we don't want your fleet to be sunk...\n"
+    )
+    time.sleep(2)
+    print("Computers board is loaded, hope you enjoy the game...\n")
+    time.sleep(2)
+
+
 class Game:
     welcome_screen()
     name_input()
     play_game()
+
 
 Game()

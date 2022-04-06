@@ -236,6 +236,7 @@ def turn(board):
             print("COMPUTERS BOARD \n")
 
 def play_game():
+    clear_console()
     # Computer places ships
     place_ship(COMPUTER_BOARD)
     # Computer board displayed
