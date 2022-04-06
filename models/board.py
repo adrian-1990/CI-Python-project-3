@@ -1,7 +1,7 @@
 import random
 import time
 from .ship import Ship
-from utils import clear_console, validate_coordinates
+from utils import clear_console
 """
 Creates all the boards required for the game
 """
@@ -123,7 +123,7 @@ def user_input(place_ship):
     if place_ship == True:
         while True:
             try:
-                orientation = input("Do you want to place the ship horizontal(H) or vertical(V): \n").upper()
+                orientation = input("Do you want to place the ship Horizontal(H) or Vertical(V): \n").upper()
                 if orientation == "H" or orientation == "V":
                     break
                 else:
@@ -223,7 +223,6 @@ def play_game():
     # Computer places ships
     place_ship(COMPUTER_BOARD)
     # Computer board displayed
-    
     #print_board(COMPUTER_BOARD)
     # Player board displayed
     print_board(PLAYER_BOARD)
