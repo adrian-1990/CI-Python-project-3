@@ -2,12 +2,17 @@ import random
 import time
 from .ship import Ship
 from utils import clear_console, validate_coordinates
-
+"""
+Creates all the boards required for the game
+"""
 PLAYER_BOARD = [[" "] * 10 for i in range(10)]
 COMPUTER_BOARD = [[" "] * 10 for i in range(10)]
 PLAYER_GUESS_BOARD = [[" "] * 10 for i in range(10)]
 COMPUTER_GUESS_BOARD = [[" "] * 10 for i in range(10)]
-
+"""
+Ships length to be accessed in place_ships
+Length of ships taken from board game
+"""
 SHIPS_LENGTHS = [2, 3, 3, 4, 5]
 
 letters_to_numbers = {
@@ -23,7 +28,7 @@ letters_to_numbers = {
             "J": 9,
         }
 
-# creates the players game board
+# creates players game board
 def print_board(board):
     print("  A B C D E F G H I J")
     print("  +-+-+-+-+-+-+-+-+-+")
