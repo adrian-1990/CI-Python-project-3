@@ -1,6 +1,6 @@
 import time
 import random
-from models.board import play_game
+from board import play_game
 from utils import clear_console
 
 

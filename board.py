@@ -1,6 +1,6 @@
 import random
 import time
-from .ship import Ship
+from models.ship import Ship
 from utils import clear_console
 """
 For creating the code for the game board and logic, 
@@ -50,7 +50,7 @@ def print_board(board):
     print("  +-+-+-+-+-+-+-+-+-+")
     row_number = 1
     for row in board:
-        print("%d|%s|" % (row_number, "|".join(row)))
+        print("%s%d|%s|" % (' ' if row_number < 10 else '', row_number, "|".join(row)))
         row_number += 1
 
 def place_ship(board):
