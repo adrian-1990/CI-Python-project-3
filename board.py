@@ -32,22 +32,22 @@ Patrolboat : 2
 SHIPS_LENGTHS = [2, 3, 3, 4, 5]
 
 letters_to_numbers = {
-            "A": 0,
-            "B": 1,
-            "C": 2,
-            "D": 3,
-            "E": 4,
-            "F": 5,
-            "G": 6,
-            "H": 7,
-            "I": 8,
-            "J": 9,
+            "A": 1,
+            "B": 2,
+            "C": 3,
+            "D": 4,
+            "E": 5,
+            "F": 6,
+            "G": 7,
+            "H": 8,
+            "I": 9,
+            "J": 10,
         }
 
 # creates players game board
 def print_board(board):
-    print("  A B C D E F G H I J")
-    print("  +-+-+-+-+-+-+-+-+-+")
+    print("  A  B  C  D  E  F  G  H  I  J")
+    print("  +--+--+--+--+--+--+--+--+--+")
     row_number = 1
     for row in board:
         print("%s%d|%s|" % (' ' if row_number < 10 else '', row_number, "|".join(row)))
@@ -148,14 +148,14 @@ def user_input(place_ship):
                 print("Please enter a valid orientaion (H or V)")
         while True:
             try:
-                row = input("Enter the row of the ship 0-9: \n")
-                if row in '0123456789':
+                row = input("Enter the row of the ship 1-10: \n")
+                if row in '12345678910':
                     row = int(row) - 1
                     break
                 else:
                     raise ValueError
             except ValueError:
-                print("Please enter a valid letter between 0-9")
+                print("Please enter a valid letter between 1-10")
         while True:
             try:
                 column = input("Enter the column of the ship A-J: \n").upper()
@@ -170,14 +170,14 @@ def user_input(place_ship):
     else:
         while True:
             try:
-                row = input("Enter the row of the ship 0-9: \n")
-                if row in '0123456789':
+                row = input("Enter the row of the ship 1-10: \n")
+                if row in '12345678910':
                     row = int(row) - 1
                     break
                 else:
                     raise ValueError
             except ValueError:
-                print("Please enter a valid letter between 0-9")
+                print("Please enter a valid letter between 1-10")
         while True:
             try:
                 column = input("Enter the column of the ship A-J: \n").upper()
@@ -231,7 +231,7 @@ def turn(board):
             print("W are hit, the enemy has struck one of our ships")
             print("COMPUTERS BOARD \n")
         else:
-            board[row][column] = "-"
+            board[row][column] = "#"
             print("The enemy has missed, let's continue our assault\n")
             print("COMPUTERS BOARD \n")
 
@@ -249,7 +249,8 @@ def play_game():
     while True:
         # Player turn
         while True:
-            print('Enter a location fo rus to attack...\n')
+            print('Enter a location for us to attack...\n')7
+
             print_board(PLAYER_GUESS_BOARD)
             turn(PLAYER_GUESS_BOARD)
             time.sleep(1)
