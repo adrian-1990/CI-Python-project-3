@@ -36,9 +36,21 @@ When planning the game I created a flow chart to get an understanding of how I w
 
 ## Deployment
 
-### Forking a GitHub Repository
-
 ### Making a Local Clone
+
+1. Log into GitHub and locate the GitHub repositary you want to clone.
+2. Open the respositary and under it's name click "Code"
+3. To clone, under "HTTPS" copy the link.
+4. Open your Gitpod terminal.
+5. In the terminal type in ```git clone``` and the repositarys name:
+
+     ![git clone](https://user-images.githubusercontent.com/79532281/162242570-7a6029c1-11da-469c-99b8-4b0d6f8ea7f1.png)
+6. Press enter and your clone will be created:
+     ![git clone 2](https://user-images.githubusercontent.com/79532281/162243069-6abe04aa-ff12-4825-9841-3c7533473ed7.png)
+     
+     ![git clone 3](https://user-images.githubusercontent.com/79532281/162243138-b50b3fa1-2030-4c97-991b-fd4c447721cd.png)
+
+
 
 ### Deploying to Heroku
 
