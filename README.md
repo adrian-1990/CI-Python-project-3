@@ -34,6 +34,17 @@ When planning the game I created a flow chart to get an understanding of how I w
 
 ### Bugs Found
 
+**Gameboard**
+
+When creating the gameboard I came across the below bug. The bottom row of the grid was out of sequence with the rest of the board and didn't provide the positive UX.
+
+![game board bug](https://user-images.githubusercontent.com/79532281/162245500-1682d231-52fb-4529-801e-e27d2535cd6b.png)
+
+To solve the issue, in my function ```print_board``` I added spacing to any row less than 10, the idea behind this is the same as adding padding in CSS. This fixed the layout issue on the board and now the layout is uniformed.
+
+![final board](https://user-images.githubusercontent.com/79532281/162246532-68e83cc1-8c80-4b4c-902d-87fa46f8e939.png)
+
+
 ## Deployment
 
 ### Making a Local Clone
