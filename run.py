@@ -65,7 +65,7 @@ Legend:\n
 
 def name_input():
     clear_console()
-    user_name = ''
+    user_name = ""
     while not user_name:
         value = input("Please enter your name:\n")
 

@@ -46,8 +46,8 @@ letters_to_numbers = {
 
 # creates players game board
 def print_board(board):
-    print("  A  B  C  D  E  F  G  H  I  J")
-    print("  +--+--+--+--+--+--+--+--+--+")
+    print("   A B C D E F G H I J")
+    print("   +-+-+-+-+-+-+-+-+-+")
     row_number = 1
     for row in board:
         print("%s%d|%s|" % (' ' if row_number < 10 else '', row_number, "|".join(row)))
@@ -80,7 +80,7 @@ def place_ship(board):
                         break
             else:
                 place_ship = True
-                print('Place ship with a length of ' + str(ship_length))
+                print('Place ship with a length of ' + str(ship_length) + '\n')
                 row, column, orientation = user_input(place_ship)
                 if fit_ship_check(ship_length, row, column, orientation):
                     # check if ship overlaps
@@ -107,12 +107,12 @@ def fit_ship_check(SHIP_LENGTH, row, column, orientation):
     The fit_ship_check checks if the ships inputted fit on the board
     """
     if orientation == "H":
-        if column + SHIP_LENGTH > 8:
+        if column + SHIP_LENGTH > 10:
             return False
         else:
             return True
     else:
-        if row + SHIP_LENGTH > 8:
+        if row + SHIP_LENGTH > 10:
             return False
         else:
             return True
@@ -147,49 +147,49 @@ def user_input(place_ship):
                 else:
                     raise ValueError
             except ValueError:
-                print("Please enter a valid orientaion (H or V)")
+                print("Your ship doesn't fit there, please try a differant location... \n")
         while True:
             try:
                 row = input("Enter the row of the ship 1-10: \n")
-                if row in '0123456789':
+                if row in '12345678910':
                     row = int(row) - 1
                     break
                 else:
                     raise ValueError
             except ValueError:
-                print("Please enter a valid letter between 1-10")
+                print("Please enter a valid letter between 1-10\n")
         while True:
             try:
                 column = input("Enter the column of the ship A-J: \n").upper()
                 if column not in 'ABCDEFGHIJ':
-                    print("Please enter a valid letter between A-J")
+                    print("Please enter a valid letter between A-J\n")
                 else:
                     column = letters_to_numbers[column]
                     break
             except KeyError:
-                print("Please enter a valid letter between A-J")
+                print("Please enter a valid letter between A-J\n")
         return row, column, orientation
     else:
         while True:
             try:
                 row = input("Enter the row of the ship 1-10: \n")
-                if row in '0123456789':
+                if row in '12345678910':
                     row = int(row) - 1
                     break
                 else:
                     raise ValueError
             except ValueError:
-                print("Please enter a valid letter between 1-10")
+                print("Please enter a valid letter between 1-10\n")
         while True:
             try:
                 column = input("Enter the column of the ship A-J: \n").upper()
                 if column not in 'ABCDEFGHIJ':
-                    print("Please enter a valid letter between A-J")
+                    print("Please enter a valid letter between A-J\n")
                 else:
                     column = letters_to_numbers[column]
                     break
             except KeyError:
-                print("Please enter a valid letter between A-J")
+                print("Please enter a valid letter between A-J\n")
         return row, column
 
 
@@ -232,14 +232,14 @@ def turn(board):
             turn(board)
         elif PLAYER_BOARD[row][column] == "O":
             board[row][column] = "X"
-            print("We are hit, the enemy has struck one of our ships")
-            time.sleep(2)
-            print("COMPUTERS BOARD \n")
+            print("We are hit, the enemy has struck one of our ships\n")
+            time.sleep(1)
+            print("PLAYERS BOARD: /n")
         else:
             board[row][column] = "#"
             print("The enemy has missed, let's continue our assault\n")
-            time.sleep(2)
-            print("COMPUTERS BOARD \n")
+            time.sleep(1)
+            print("PLAYERS BOARD: \n")
 
 def play_game():
     clear_console()
@@ -255,14 +255,15 @@ def play_game():
     while True:
         # Player turn
         while True:
-            print('Enter a location for us to attack...\n')7
+            print('Enter a location for us to attack...\n')
+            print("COMPUTERS BOARD:\n")
 
             print_board(PLAYER_GUESS_BOARD)
             turn(PLAYER_GUESS_BOARD)
             time.sleep(1)
             break
         if hit_count(PLAYER_GUESS_BOARD) == 17:
-            print("WE HAVE WON!!! The enemy's fleet is destroyed and lying on the ocean floor.")
+            print("WE HAVE WON!!! The enemy's fleet is destroyed and lying on the ocean floor.\n")
             break
         # Computer turn
         while True:
@@ -273,5 +274,5 @@ def play_game():
         if hit_count(COMPUTER_GUESS_BOARD) == 17:
             print(
                 "YOU HAVE LOST!!\n"
-                "Your fleet has been destroyed, as Captain you must go down with the ship...")
+                "Your fleet has been destroyed, as Captain you must go down with the ship...\n")
             break
