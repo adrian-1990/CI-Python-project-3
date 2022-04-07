@@ -243,17 +243,18 @@ def turn(board):
             turn(board)
         elif PLAYER_BOARD[row][column] == "O":
             board[row][column] = "X"
-            print("Computer taking aim...")
+            print("Computer taking aim...\n")
             time.sleep(2)
             print("We are hit, the enemy has struck one of our ships\n")
             time.sleep(2)
             print("PLAYERS BOARD: \n")
         else:
             board[row][column] = "#"
-            print("Computer taking aim...")
+            print("Computer taking aim...\n")
             time.sleep(2)
             print("The enemy has missed, let's continue our assault\n")
             time.sleep(2)
+            clear_console()
             print("PLAYERS BOARD: \n")
 
 
@@ -266,11 +267,12 @@ def play_game():
     print_board(PLAYER_BOARD)
     # Place ships on the players board
     place_ship(PLAYER_BOARD)
+    clear_console()
 
     while True:
         # Player turn
         while True:
-            print("Enter a location for us to attack...\n")
+            print("\n Enter a location for us to attack...\n")
             print("COMPUTERS BOARD:\n")
 
             print_board(PLAYER_GUESS_BOARD)
@@ -292,7 +294,6 @@ def play_game():
         # Computer turn
         while True:
             turn(COMPUTER_GUESS_BOARD)
-            time.sleep(2)
             break
         print_board(COMPUTER_GUESS_BOARD)
         if hit_count(COMPUTER_GUESS_BOARD) == 17:
