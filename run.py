@@ -65,13 +65,16 @@ Legend:\n
 
 def name_input():
     clear_console()
-    user_name = input("Please enter your name:\n").upper()
-    if user_name.lower() == "computer":
-        print("That is my name human!!! Please enter your own name: \n")
-        user_name = input("Please enter your name:\n").upper()
-    elif len(user_name) == 0:
-        print("I appreciate the secrecy but I must know your name...")
-        user_name = input("Please enter your name:\n").upper()
+    user_name = ''
+    while not user_name:
+        value = input("Please enter your name:\n")
+
+        if value == "computer":
+            print("That is my name human!!! Please enter your own name: \n")
+        elif len(value) == 0:
+            print("I appreciate the secrecy but I must know your name...")
+        else:
+            user_name = value
     print("Welcome " + user_name + ", the game is about to begin...\n")
     time.sleep(2)
     print("This is based on the classic Battlefield board game\n")
