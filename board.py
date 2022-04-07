@@ -1,5 +1,6 @@
 import random
 import time
+from run import user_name
 from models.ship import Ship
 from utils import clear_console
 
@@ -242,13 +243,17 @@ def turn(board):
             turn(board)
         elif PLAYER_BOARD[row][column] == "O":
             board[row][column] = "X"
+            print("Computer taking aim...")
+            time.sleep(2)
             print("We are hit, the enemy has struck one of our ships\n")
-            time.sleep(1)
+            time.sleep(2)
             print("PLAYERS BOARD: \n")
         else:
             board[row][column] = "#"
+            print("Computer taking aim...")
+            time.sleep(2)
             print("The enemy has missed, let's continue our assault\n")
-            time.sleep(1)
+            time.sleep(2)
             print("PLAYERS BOARD: \n")
 
 
@@ -270,7 +275,7 @@ def play_game():
 
             print_board(PLAYER_GUESS_BOARD)
             turn(PLAYER_GUESS_BOARD)
-            time.sleep(1)
+            time.sleep(2)
             break
         if hit_count(PLAYER_GUESS_BOARD) == 17:
             print(
@@ -282,6 +287,7 @@ def play_game():
    |_| \___/ \___/     \_/\_/  |___|_| \_| (_) /n
                 
     The enemy's fleet is destroyed and lying on the ocean floor.\n"""
+    "Congratulations" + user_name 
             )
             break
         # Computer turn
