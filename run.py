@@ -11,13 +11,12 @@ def welcome_screen():
     clear_console()
     print(
         """
- ______                 _            _     _            
-(____  \       _   _   | |          | |   (_)           
- ____)  ) ____| |_| |_ | | ____  ___| | _  _ ____   ___ 
-|  __  ( / _  |  _)  _)| |/ _  )/___) || \| |  _ \ /___)
-| |__)  | ( | | |_| |__| ( (/ /|___ | | | | | | | |___ |
-|______/ \_||_|\___)___)_|\____|___/|_| |_|_| ||_/(___/ 
-                                            |_| 
+
+██████   █████  ████████ ████████ ██      ███████ ███████ ██   ██ ██ ██████  ███████ 
+██   ██ ██   ██    ██       ██    ██      ██      ██      ██   ██ ██ ██   ██ ██      
+██████  ███████    ██       ██    ██      █████   ███████ ███████ ██ ██████  ███████ 
+██   ██ ██   ██    ██       ██    ██      ██           ██ ██   ██ ██ ██           ██ 
+██████  ██   ██    ██       ██    ███████ ███████ ███████ ██   ██ ██ ██      ███████ 
         
 \n
 """
@@ -35,15 +34,28 @@ def welcome_screen():
                 clear_console()
                 print(
                     """
-*** How to Play ***\n
+
+██   ██  ██████  ██     ██     ████████  ██████      ██████  ██       █████  ██    ██ 
+██   ██ ██    ██ ██     ██        ██    ██    ██     ██   ██ ██      ██   ██  ██  ██  
+███████ ██    ██ ██  █  ██        ██    ██    ██     ██████  ██      ███████   ████   
+██   ██ ██    ██ ██ ███ ██        ██    ██    ██     ██      ██      ██   ██    ██    
+██   ██  ██████   ███ ███         ██     ██████      ██      ███████ ██   ██    ██                                                                                        
+\n
 1. Please enter your name and press enter.
 2. The game board is a 10 x 10 grid and each square in the grid will be repersented by number and letter(eg. a7, c2). 
 3. Each players fleet consists of 5 vessels. These length of the ships are based on the Battleship board game.
 4. The player must position the location of their ships, the computers board will be generated automatically.
-5. Enter your coordinates into the console to fire a shot. You will be notified of a hit or miss.
-6. Player and computers selections will appear on their game board to avoid selecting the same coordinates and help narrow down where ships are located.
-7. A winner is decalred when the players or computers fleet is destroyed.\n
-Legend:\n
+5. Ships placed VERTICALLY are placed from TOP --> DOWN, ships place HORIZONTALLY are placed LEFT --> RIGHT.
+6. Enter your coordinates into the console to fire a shot. You will be notified of a hit or miss.
+7. Player and computers selections will appear on their game board to avoid selecting the same coordinates and help narrow down where ships are located.
+8. A winner is decalred when the players or computers fleet is destroyed.\n
+
+██      ███████  ██████  ███████ ███    ██ ██████  
+██      ██      ██       ██      ████   ██ ██   ██ 
+██      █████   ██   ███ █████   ██ ██  ██ ██   ██ 
+██      ██      ██    ██ ██      ██  ██ ██ ██   ██ 
+███████ ███████  ██████  ███████ ██   ████ ██████                                                 
+\n
 1. '.' = water or empty space
 2. 'O' = part of ship
 3. 'X' = part of ship that was hit with bullet

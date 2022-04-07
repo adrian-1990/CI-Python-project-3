@@ -254,13 +254,12 @@ def turn(board):
 
 def play_game():
     clear_console()
-    # Computer places ships
+    # Computer places ships automatically
+    #COMPUTER_BOARD remains hidden so player cannot see where ships are placed.
     place_ship(COMPUTER_BOARD)
-    # Computer board displayed
-    # print_board(COMPUTER_BOARD)
-    # Player board displayed
+    # Players board is displayed
     print_board(PLAYER_BOARD)
-    # Player places ships
+    # Place ships on the players board
     place_ship(PLAYER_BOARD)
 
     while True:
