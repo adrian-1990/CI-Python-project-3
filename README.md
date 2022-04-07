@@ -76,4 +76,7 @@ The project was deployed to Heroku using the following steps:
 * [Lucid](https://lucid.co/)
      * I used Lucid to create my Flowchart.
 
+* [Heroku](https://id.heroku.com/login)
+     * For deplyment of the live site
+
 
