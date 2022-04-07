@@ -40,7 +40,11 @@ When creating the gameboard I came across the below bug. The bottom row of the g
 
 ![game board bug](https://user-images.githubusercontent.com/79532281/162245500-1682d231-52fb-4529-801e-e27d2535cd6b.png)
 
-To solve the issue, in my function ```print_board``` I added spacing to any row less than 10, the idea behind this is the same as adding padding in CSS. This fixed the layout issue on the board and now the layout is uniformed.
+To solve the issue, in my function ```print_board``` I added spacing to any row number less than 10, the idea behind this is the same as adding padding in CSS.
+
+![board bug code](https://user-images.githubusercontent.com/79532281/162247201-8404c09d-6bb8-4fbf-a726-7cc705f94050.png)
+
+This fixed the layout issue on the board and now the layout is uniformed.
 
 ![final board](https://user-images.githubusercontent.com/79532281/162246532-68e83cc1-8c80-4b4c-902d-87fa46f8e939.png)
 
