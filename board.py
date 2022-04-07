@@ -255,7 +255,7 @@ def turn(board):
 def play_game():
     clear_console()
     # Computer places ships automatically
-    #COMPUTER_BOARD remains hidden so player cannot see where ships are placed.
+    # COMPUTER_BOARD remains hidden so player cannot see where ships are placed.
     place_ship(COMPUTER_BOARD)
     # Players board is displayed
     print_board(PLAYER_BOARD)
@@ -274,7 +274,14 @@ def play_game():
             break
         if hit_count(PLAYER_GUESS_BOARD) == 17:
             print(
-                "WE HAVE WON!!! The enemy's fleet is destroyed and lying on the ocean floor.\n"
+                """
+ __   _____  _   _  __        _____ _   _   _ 
+ \ \ / / _ \| | | | \ \      / /_ _| \ | | | |
+  \ V / | | | | | |  \ \ /\ / / | ||  \| | | |
+   | || |_| | |_| |   \ V  V /  | || |\  | |_|
+   |_| \___/ \___/     \_/\_/  |___|_| \_| (_) /n
+                
+    The enemy's fleet is destroyed and lying on the ocean floor.\n"""
             )
             break
         # Computer turn
@@ -285,7 +292,13 @@ def play_game():
         print_board(COMPUTER_GUESS_BOARD)
         if hit_count(COMPUTER_GUESS_BOARD) == 17:
             print(
-                "YOU HAVE LOST!!\n"
-                "Your fleet has been destroyed, as Captain you must go down with the ship...\n"
+                """
+
+ __   _____  _   _   _     ___  ____  _____   _ 
+ \ \ / / _ \| | | | | |   / _ \/ ___|| ____| | |
+  \ V / | | | | | | | |  | | | \___ \|  _|   | |
+   | || |_| | |_| | | |__| |_| |___) | |___  |_|
+   |_| \___/ \___/  |_____\___/|____/|_____| (_) \n
+Your fleet has been destroyed, as Captain you must go down with the ship...\n"""
             )
             break
