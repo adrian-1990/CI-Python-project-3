@@ -18,6 +18,11 @@ Please see my live site below, this was deployed using [Heroku](https://id.herok
 
 ### Planning
 
+When planning the game I created a flow chart to get an understanding of how I wanted my game to work using OOP. This was created to get a basic flow of the games logic and during the development of the game I relaised I needed more functions to solve the bugs I was encountering.
+
+![Flowchart](https://user-images.githubusercontent.com/79532281/162234360-0594996b-f696-4f2a-8ea8-c2c9f578598d.png)
+
+
 ## Features
 
 ### Future Features
@@ -37,7 +42,7 @@ Please see my live site below, this was deployed using [Heroku](https://id.herok
 
 ### Deploying to Heroku
 
-The project was deployed to Heroku using the following steps...
+The project was deployed to Heroku using the following steps:
 
 1. Log in to [Heroku](https://id.heroku.com/login) and if not taken there automatically, navigate to your personal app dashboard.
 2. At the top of the page locate the 'New' drop down, click it and then select 'Create new app'.
@@ -45,11 +50,13 @@ The project was deployed to Heroku using the following steps...
 4. Your app should now be created so from the menu towards the top of the page click 'Settings'
 5. Click 'Reveal Config Vars' in the Config vars section and enter the key as PORT and the value as 8000. Click the Add button.
 6. Under the 'Buildpacks' section click 'Add buildpack'.
-  * Select 'Python' and then click the 'Save changes' button.
-  * Click 'Add buildpack' again, select 'nodejs' and click the 'Save changes' button again.
-  * Ensure the build packs are ordered as below:
-         ```heroku/python```
-         ```heroku/nodejs```
+      * Select 'Python' and then click the 'Save changes' button.
+      * Click 'Add buildpack' again, select 'nodejs' and click the 'Save changes' button again.
+      * Ensure the build packs are ordered as below:
+  
+          ```heroku/python```
+    
+          ```heroku/nodejs```
 7. Navigate to the 'Deploy' page using the menu towards the top of the page.
 8. Select 'GitHub' from the 'Deployment method' section and you will be prompted to 'Connect to GitHub'.
 9. Once connected to your GitHub account you will be able to search for your repository which contains the battleships code.
