@@ -1,31 +1,44 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Battleships
 
-Welcome adrian-1990,
+This is based on the classic boardgame of the same name. The player will challenge the computer in a head to head game and whoever destoy their opponents fleet wins.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+Players must place their ships manually on the game board, the computers game board is automatically created and hidden from the player. 
 
-## Reminders
+When all boards are ready the battle begins, a players guesses board is displayed showing their previous guesses and the players board is also shown.
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+The ste is created using Python and displays the skills i have learnt during the Pythonmodule.
 
-## Creating the Heroku app
+### Live site
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+Please see my live site below, this was deployed using [Heroku](https://id.heroku.com/login)
 
-1. `heroku/python`
-2. `heroku/nodejs`
+## User Experience (UX)
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+**User Stories**
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+### Planning
 
-Connect your GitHub repository and deploy as normal.
+## Features
 
-## Constraints
+### Future Features
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+## Technologies Used
 
------
-Happy coding!
+
+## Testing 
+
+### Bugs Found
+
+## Deployment
+
+### Forking a GitHub Repository
+
+### Making a Local Clone
+
+### Deploying to Heroku
+
+## Credits
+
+
+
+
