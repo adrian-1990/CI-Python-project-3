@@ -93,7 +93,7 @@ def name_input():
             user_name = value
     print("Welcome " + user_name + ", the game is about to begin...\n")
     time.sleep(2)
-    print("This is based on the classic Battlefield board game\n")
+    print("This is based on the classic Battlefield board game...\n")
     time.sleep(2)
     print(
         "You must first place your ships, make sure to choose well as we don't want your fleet to be sunk...\n"

@@ -1,6 +1,5 @@
 import random
 import time
-from run import user_name
 from models.ship import Ship
 from utils import clear_console
 
@@ -97,6 +96,7 @@ def place_ship(board):
                     else:
                         print("Ship placed, lets place your next vessel... \n")
                         time.sleep(2)
+                        clear_console()
                         # place ship
                         if orientation == "H":
                             for i in range(column, column + ship_length):
@@ -161,7 +161,7 @@ def user_input(place_ship):
                 )
         while True:
             try:
-                row = input("Enter the row of the ship 1-10: \n")
+                row = input("Enter the row of the ship (1-10): \n")
                 if row in "12345678910":
                     row = int(row) - 1
                     break
@@ -171,7 +171,7 @@ def user_input(place_ship):
                 print("Please enter a valid letter between 1-10\n")
         while True:
             try:
-                column = input("Enter the column of the ship A-J: \n").upper()
+                column = input("Enter the column of the ship (A-J): \n").upper()
                 if column not in "ABCDEFGHIJ":
                     print("Please enter a valid letter between A-J\n")
                 else:
@@ -183,7 +183,7 @@ def user_input(place_ship):
     else:
         while True:
             try:
-                row = input("Enter the row of the ship 1-10: \n")
+                row = input("Enter the row of the ship (1-10): \n")
                 if row in "12345678910":
                     row = int(row) - 1
                     break
@@ -193,7 +193,7 @@ def user_input(place_ship):
                 print("Please enter a valid letter between 1-10\n")
         while True:
             try:
-                column = input("Enter the column of the ship A-J: \n").upper()
+                column = input("Enter the column of the ship (A-J): \n").upper()
                 if column not in "ABCDEFGHIJ":
                     print("Please enter a valid letter between A-J\n")
                 else:
@@ -287,7 +287,6 @@ def play_game():
    |_| \___/ \___/     \_/\_/  |___|_| \_| (_) /n
                 
     The enemy's fleet is destroyed and lying on the ocean floor.\n"""
-    "Congratulations" + user_name 
             )
             break
         # Computer turn
