@@ -244,7 +244,7 @@ def turn(board):
             board[row][column] = "X"
             print("We are hit, the enemy has struck one of our ships\n")
             time.sleep(1)
-            print("PLAYERS BOARD: /n")
+            print("PLAYERS BOARD: \n")
         else:
             board[row][column] = "#"
             print("The enemy has missed, let's continue our assault\n")
