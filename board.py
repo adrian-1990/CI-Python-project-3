@@ -286,15 +286,17 @@ def play_game():
  \ \ / / _ \| | | | \ \      / /_ _| \ | | | |
   \ V / | | | | | |  \ \ /\ / / | ||  \| | | |
    | || |_| | |_| |   \ V  V /  | || |\  | |_|
-   |_| \___/ \___/     \_/\_/  |___|_| \_| (_) /n
+   |_| \___/ \___/     \_/\_/  |___|_| \_| (_) \n
                 
-    The enemy's fleet is destroyed and lying on the ocean floor.\n"""
+The enemy's fleet is destroyed and lying on the ocean floor.\n"""
             )
             break
         # Computer turn
         while True:
             turn(COMPUTER_GUESS_BOARD)
             break
+        clear_console()
+        print("PLAYERS BOARD: \n")
         print_board(COMPUTER_GUESS_BOARD)
         if hit_count(COMPUTER_GUESS_BOARD) == 17:
             print(
