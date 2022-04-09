@@ -115,3 +115,6 @@ The project was deployed to Heroku using the following steps:
 * [Pythondex](https://pythondex.com/python-battleship-game)
      * Also used for guidence creating my game. Idea for creating variables and calling into functions in board.py was taken from here.
 
+* [PEP8](http://pep8online.com/)
+     * Used to check code and no errors appearing.
+
