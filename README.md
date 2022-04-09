@@ -10,7 +10,7 @@ The ste is created using Python and displays the skills i have learnt during the
 
 ### Live site
 
-Please see my live site below, this was deployed using [Heroku](https://id.heroku.com/login)
+Please see my live site below, this was deployed using [Heroku](https://id.heroku.com/login):
 
 ## User Experience (UX)
 
@@ -25,7 +25,50 @@ When planning the game I created a flow chart to get an understanding of how I w
 
 ## Features
 
+#### Arrival Menu
+
+When the player opens the site they are greated with the games header and below text asking do they want to play the game(p) or instructions on the games(i)
+If the player selects **p** they are taking to a new screen and asked to input their name. If the select **i** they are taken to a new screen and the games rules and game legend are displayed.
+
+![home screen](https://user-images.githubusercontent.com/79532281/162566809-a3d2e585-8a8e-4c59-91b2-ea0ae7ced5f7.png)
+
+#### Instructions screen.
+
+**How to play**
+
+On this screen the user is shown the steps needed to play the game, how to place their battleships, if they hit or miss and finally how you win the game. 
+
+![how to play](https://user-images.githubusercontent.com/79532281/162566884-67594775-1ec3-47a2-83be-ca0a3086a935.png)
+
+**Legend**
+
+This gives the user a description of what each icon means on the game board so when they play the game they can understand what they are looking at.
+
+![Legend](https://user-images.githubusercontent.com/79532281/162566938-8748688e-1387-4813-a228-21e07d0f9eb1.png)
+
+#### Welcome Message
+
+After the user selects **p** to play they game they are taking to a new screen and asked to enter their name. The player must enter a name or else they will get the below warning message. The player also cannot enter **computer** as their user name as the computer knows this is their name and won't let anybody steal it.
+
+![no name entered](https://user-images.githubusercontent.com/79532281/162567284-814fe4b5-3be6-491c-98c5-e93bc8883ffc.png)
+
+![computer name](https://user-images.githubusercontent.com/79532281/162567287-8289e252-6080-49e2-87ba-d2ea68bbbaed.png)
+
 ### Future Features
+
+Below are the features I would like to implement into the game when I learn more about Python:
+
+**Display ships on board**
+
+I would like to discplay an icon for each ship to appear on the gameboard, for example if the ship is a Carrier then C would appear on the board and would appear over 5 spaces to match the vessel length. After a ship is sunk I would like a message to appear letting you know ship type sunk, "Well done, you have sunk {ship.type}"
+
+**Display Gameboards Side by Side**
+
+I would like for the gameboards to appear side by side. This will stop the user from having to scroll up to look at the game board where the computer has attacked and provide a better UX.
+
+**Better computer AI**
+
+I would like to increase the computers AI when attacking. If the computer hits the players board, I would then like the computer to attack the positions around the hit until they sink a ship. Currently if the computer gets a hit, it's next attack is a random position. This will make games more challenging for the players and improve the UX.
 
 ## Technologies Used
 
@@ -106,4 +149,15 @@ The project was deployed to Heroku using the following steps:
 * [Heroku](https://id.heroku.com/login)
      * For deplyment of the live site
 
+* [Stack overflow - clear_console](https://stackoverflow.com/questions/2084508/clear-terminal-in-python)
+     * Used to create clear_console.
+
+* [Stack overflow - Python](https://stackoverflow.com/search?q=battleships+python&s=87361546-624c-486c-98c9-d8a5cd81f924&s=b0c77bec-adf6-4812-932e-c25b8b2cc5ed)
+     * Also used Stackoverflow to get guidence on creating my code.
+
+* [Pythondex](https://pythondex.com/python-battleship-game)
+     * Also used for guidence creating my game. Idea for creating variables and calling into functions in board.py was taken from here.
+
+* [PEP8](http://pep8online.com/)
+     * Used to check code and no errors appearing.
 
