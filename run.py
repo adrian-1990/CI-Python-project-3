@@ -77,7 +77,7 @@ def name_input():
     clear_console()
     user_name = ""
     while not user_name:
-        value = input("Please enter your name:\n")
+        value = input("Please enter your name:\n").capitalize()
 
         if value == "computer":
             print("That is my name human!!! Please enter your own name... \n")

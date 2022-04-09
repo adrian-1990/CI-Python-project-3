@@ -272,6 +272,12 @@ def play_game():
         # Player turn
         while True:
             clear_console()
+            print("""
+            
+ +-+-+-+-+-+-+-+-+-+-+
+ |B|A|T|T|L|E|S|H|I|P|
+ +-+-+-+-+-+-+-+-+-+-+
+""")
             print("PLAYERS BOARD:\n")
             print_board(COMPUTER_GUESS_BOARD)
             print("\nCOMPUTERS BOARD:\n")
