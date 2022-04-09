@@ -267,6 +267,7 @@ def play_game():
     print_board(PLAYER_BOARD)
     # Place ships on the players board
     place_ship(PLAYER_BOARD)
+    clear_console()
 
     while True:
         # Player turn
