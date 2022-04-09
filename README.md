@@ -10,7 +10,7 @@ The ste is created using Python and displays the skills i have learnt during the
 
 ### Live site
 
-Please see my live site below, this was deployed using [Heroku](https://id.heroku.com/login)
+Please see my live site below, this was deployed using [Heroku](https://id.heroku.com/login):
 
 ## User Experience (UX)
 
@@ -106,4 +106,12 @@ The project was deployed to Heroku using the following steps:
 * [Heroku](https://id.heroku.com/login)
      * For deplyment of the live site
 
+* [Stack overflow - clear_console](https://stackoverflow.com/questions/2084508/clear-terminal-in-python)
+     * Used to create clear_console.
+
+* [Stack overflow - Python](https://stackoverflow.com/search?q=battleships+python&s=87361546-624c-486c-98c9-d8a5cd81f924&s=b0c77bec-adf6-4812-932e-c25b8b2cc5ed)
+     * Also used Stackoverflow to get guidence on creating my code.
+
+* [Pythondex](https://pythondex.com/python-battleship-game)
+     * Also used for guidence creating my game. Idea for creating variables and calling into functions in board.py was taken from here.
 
