@@ -188,4 +188,6 @@ The project was deployed to Heroku using the following steps:
 * [PEP8](http://pep8online.com/)
      * Used to check code and no errors appearing.
 
+* [Geeks for Geeks](https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/)
+     * This was used to install Pyfiglet and to implement into code.
 
