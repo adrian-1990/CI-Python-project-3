@@ -62,6 +62,7 @@ def welcome_screen():
 
                 # if its p break the while loop and play the game
             elif user_prompt == "P":
+                clear_console()
                 break
             # raise an error if player doesn't select correct options
             else:
@@ -99,6 +100,7 @@ def name_input():
 
 class Game:
     welcome_screen()
+    clear_console()
     name_input()
     play_game()
 

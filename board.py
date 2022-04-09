@@ -267,6 +267,7 @@ def play_game():
     print_board(PLAYER_BOARD)
     # Place ships on the players board
     place_ship(PLAYER_BOARD)
+    clear_console()
 
     while True:
         # Player turn
@@ -303,6 +304,7 @@ The enemy's fleet is destroyed and lying on the ocean floor.\n"""
         # Computer turn
         while True:
             turn(COMPUTER_GUESS_BOARD)
+            clear_console()
             break
         if hit_count(COMPUTER_GUESS_BOARD) == 17:
             clear_console()
