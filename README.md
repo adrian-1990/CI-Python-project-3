@@ -89,7 +89,9 @@ I would like to increase the computers AI when attacking. If the computer hits t
 
 
 ## Testing 
+### PEP8
 
+I ran my code through PEP8 to check for errors in my code. I fixed the serious errors appearing and left with errors for line length being to long and whitespace. 
 ### Bugs Found
 
 **Gameboard**
@@ -184,6 +186,6 @@ The project was deployed to Heroku using the following steps:
      * Also used for guidence creating my game. Idea for creating variables and calling into functions in board.py was taken from here.
 
 * [PEP8](http://pep8online.com/)
-     * Used to check code and no errors appearing.![attack computers board]
+     * Used to check code and no errors appearing.
 
 
