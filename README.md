@@ -12,6 +12,8 @@ The ste is created using Python and displays the skills i have learnt during the
 
 Please see my live site below, this was deployed using [Heroku](https://id.heroku.com/login):
 
+[Battleship game](https://battleship-game-python-project.herokuapp.com/)
+
 ## User Experience (UX)
 
 **User Stories**
