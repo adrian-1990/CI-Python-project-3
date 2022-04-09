@@ -93,6 +93,11 @@ This fixed the layout issue on the board and now the layout is uniformed.
 
 ![final board](https://user-images.githubusercontent.com/79532281/162246532-68e83cc1-8c80-4b4c-902d-87fa46f8e939.png)
 
+### Bugs not fixed
+
+When playing the game on Heroku I cannot clear the screen totally during the firing rounds. A bit of the old board carry over on every turn. I tried to clear the console at various points throughout the game to try and fix it but no luck with it. To solve this issue, I added a Battleship heading at the top of the boards to break up the space between the boards.
+
+![heroku bug](https://user-images.githubusercontent.com/79532281/162592570-d0e26d57-1119-4ab7-8890-fc720ccdcc62.png)
 
 ## Deployment
 
@@ -161,5 +166,6 @@ The project was deployed to Heroku using the following steps:
      * Also used for guidence creating my game. Idea for creating variables and calling into functions in board.py was taken from here.
 
 * [PEP8](http://pep8online.com/)
-     * Used to check code and no errors appearing.
+     * Used to check code and no errors appearing.![attack computers board]
+
 
