@@ -56,6 +56,19 @@ After the user selects **p** to play they game they are taking to a new screen a
 
 ![computer name](https://user-images.githubusercontent.com/79532281/162567287-8289e252-6080-49e2-87ba-d2ea68bbbaed.png)
 
+![Welcome message](https://user-images.githubusercontent.com/79532281/162592592-af5e8d04-2bb8-4fad-b422-ce89f18a05f2.png)
+
+#### Place ships
+
+The next screen allows the player to place their ships. The player is asked how they place their ships. They are asked if the want to place horizontally or vertically, to select a row between 1 - 10 and a column between A - J. The player must place their 5 ships for the game to begin. If the player selects a row or column that is not in the list the will recieve a warning message asking them to make a correct selection.
+
+![ship placement](https://user-images.githubusercontent.com/79532281/162592669-3fa9763d-5343-477b-adef-6f4e1ea2a18a.png)
+
+![ships placed on board](https://user-images.githubusercontent.com/79532281/162592645-a1fe4bbd-8955-4c6b-95e2-b196631a7673.png)
+
+#### Firing round
+
+
 ### Future Features
 
 Below are the features I would like to implement into the game when I learn more about Python:
