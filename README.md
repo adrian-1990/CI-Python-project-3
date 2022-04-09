@@ -27,6 +27,20 @@ When planning the game I created a flow chart to get an understanding of how I w
 
 ### Future Features
 
+Below are the features I would like to implement into the game when I learn more about Python:
+
+**Display ships on board**
+
+I would like to discplay an icon for each ship to appear on the gameboard, for example if the ship is a Carrier then C would appear on the board and would appear over 5 spaces to match the vessel length. After a ship is sunk I would like a message to appear letting you know ship type sunk, "Well done, you have sunk {ship.type}"
+
+**Display Gameboards Side by Side**
+
+I would like for the gameboards to appear side by side. This will stop the user from having to scroll up to look at the game board where the computer has attacked and provide a better UX.
+
+**Better computer AI**
+
+I would like to increase the computers AI when attacking. If the computer hits the players board, I would then like the computer to attack the positions around the hit until they sink a ship. Currently if the computer gets a hit, it's next attack is a random position. This will make games more challenging for the players and improve the UX.
+
 ## Technologies Used
 
 
