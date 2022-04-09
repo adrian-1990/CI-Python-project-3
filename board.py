@@ -51,6 +51,7 @@ def print_board(board):
     print("   +-+-+-+-+-+-+-+-+-+")
     row_number = 1
     for row in board:
+        # for row_number less than 10 add spacing, this fixed alignment issue with board
         print("%s%d|%s|" % (" " if row_number < 10 else "", row_number, "|".join(row)))
         row_number += 1
 
@@ -58,12 +59,12 @@ def print_board(board):
 def place_ship(board):
     """
     The place ship function loops throught the lengths of the ships and then
-    loops until the ship fits and dosent overlap any other ships on the board
+    loops until the ship fits and dosen't overlap any other ships on the board
     and then places the ship.
     """
     #  loop through length of ships
     for ship_length in SHIPS_LENGTHS:
-        #  loop until ship fits and doesn't overlap
+        #  check ship fits and doesn't overlap
         while True:
             if board == COMPUTER_BOARD:
                 orientation, row, column = (
@@ -74,7 +75,7 @@ def place_ship(board):
                 if fit_ship_check(ship_length, row, column, orientation):
                     #  check if ship overlaps
                     if not ship_overlap(board, row, column, orientation, ship_length):
-                        #  place ship
+                        # if no overlap, place ship
                         if orientation == "H":
                             for i in range(column, column + ship_length):
                                 board[row][i] = "O"
@@ -97,7 +98,7 @@ def place_ship(board):
                         print("Ship placed, lets place your next vessel... \n")
                         time.sleep(2)
                         clear_console()
-                        # place ship
+                        # if no overlap, place ship
                         if orientation == "H":
                             for i in range(column, column + ship_length):
                                 board[row][i] = "O"
@@ -142,8 +143,9 @@ def ship_overlap(board, row, column, orientation, ship_length):
 
 def user_input(place_ship):
     """
-    The user_input function takes input from the user to enter where they want
-    to place their ships as well as guessing the computers ships on the board
+    The user_input function takes the coordinates entered by the player to place the users ships
+    User must select if the want to place horizontal or vertical, then row / column
+    Computers ships are randomly place onto their board.
     """
     if place_ship == True:
         while True:
@@ -206,8 +208,8 @@ def user_input(place_ship):
 
 def hit_count(board):
     """
-    The hit_count function counts the number of hits each board (Player,
-    Computer) has taken
+    The hit_count function counts the number of hits each board.
+    Adds a hit icon "X" everytime a ship is hit
     """
     count = 0
     for row in board:
@@ -219,7 +221,8 @@ def hit_count(board):
 
 def turn(board):
     """
-    The turn function goes through the users and computers turns
+    The turn function swaps turns between the user and computer
+    Will keep running until players / computers fleet is sunk
     """
     if board == PLAYER_GUESS_BOARD:
         row, column = user_input(PLAYER_GUESS_BOARD)
@@ -261,7 +264,7 @@ def turn(board):
 def play_game():
     clear_console()
     # Computer places ships automatically
-    # COMPUTER_BOARD remains hidden so player cannot see where ships are placed.
+    # COMPUTER_BOARD remains hidden so player cannot see where ships are placed
     place_ship(COMPUTER_BOARD)
     # Players board is displayed
     print_board(PLAYER_BOARD)
@@ -279,6 +282,7 @@ def play_game():
             turn(PLAYER_GUESS_BOARD)
             time.sleep(2)
             break
+        # the total SHIPS_LENGTH = 17, when hit_count reaches this declare game winner
         if hit_count(PLAYER_GUESS_BOARD) == 17:
             print(
                 """
