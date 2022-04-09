@@ -1,5 +1,6 @@
 import random
 import time
+import pyfiglet
 from utils import clear_console
 
 """
@@ -273,12 +274,7 @@ def play_game():
         # Player turn
         while True:
             clear_console()
-            print("""
-            
- +-+-+-+-+-+-+-+-+-+-+
- |B|A|T|T|L|E|S|H|I|P|
- +-+-+-+-+-+-+-+-+-+-+
-""")
+            print(pyfiglet.figlet_format("BATTLESHIPS", font = "digital"))
             print("PLAYERS BOARD:\n")
             print_board(COMPUTER_GUESS_BOARD)
             print("\nCOMPUTERS BOARD:\n")
@@ -290,16 +286,8 @@ def play_game():
         # the total SHIPS_LENGTH = 17, when hit_count reaches this declare game winner
         if hit_count(PLAYER_GUESS_BOARD) == 17:
             clear_console()
-            print(
-                """
- __   _____  _   _  __        _____ _   _   _ 
- \ \ / / _ \| | | | \ \      / /_ _| \ | | | |
-  \ V / | | | | | |  \ \ /\ / / | ||  \| | | |
-   | || |_| | |_| |   \ V  V /  | || |\  | |_|
-   |_| \___/ \___/     \_/\_/  |___|_| \_| (_) \n
-                
-The enemy's fleet is destroyed and lying on the ocean floor.\n"""
-            )
+            print(pyfiglet.figlet_format("YOU WIN!\n", font = "slant"))
+            print("The enemy's fleet is destroyed and lying on the ocean floor.\n")
             break
         # Computer turn
         while True:
@@ -308,12 +296,6 @@ The enemy's fleet is destroyed and lying on the ocean floor.\n"""
             break
         if hit_count(COMPUTER_GUESS_BOARD) == 17:
             clear_console()
-            print("""
- __   _____  _   _   _     ___  ____  _____   _ 
- \ \ / / _ \| | | | | |   / _ \/ ___|| ____| | |
-  \ V / | | | | | | | |  | | | \___ \|  _|   | |
-   | || |_| | |_| | | |__| |_| |___) | |___  |_|
-   |_| \___/ \___/  |_____\___/|____/|_____| (_) \n
-Your fleet has been destroyed, as Captain you must go down with the ship...\n"""
-            )
+            print(pyfiglet.figlet_format("YOU LOSE!\n", font = "slant"))
+            print("Your fleet has been destroyed, as Captain you must go down with the ship...\n")
             break

@@ -1,5 +1,6 @@
 import time
 import random
+import pyfiglet
 from board import play_game
 from utils import clear_console
 
@@ -9,16 +10,7 @@ def welcome_screen():
     Opening screen to the game
     """
     clear_console()
-    print(
-        """
- ____    _  _____ _____ _     _____ ____  _   _ ___ ____  ____  
-| __ )  / \|_   _|_   _| |   | ____/ ___|| | | |_ _|  _ \/ ___| 
-|  _ \ / _ \ | |   | | | |   |  _| \___ \| |_| || || |_) \___ \ 
-| |_) / ___ \| |   | | | |___| |___ ___) |  _  || ||  __/ ___) |
-|____/_/   \_\_|   |_| |_____|_____|____/|_| |_|___|_|   |____/ 
-\n
-"""
-    )
+    print(pyfiglet.figlet_format("BATTLESHIPS", font = "slant"))
 
     while True:
         try:
@@ -30,15 +22,8 @@ def welcome_screen():
 
             if user_prompt == "I":
                 clear_console()
-                print(
-                    """
- _   _                 _          ____  _             
-| | | | _____      __ | |_ ___   |  _ \| | __ _ _   _ 
-| |_| |/ _ \ \ /\ / / | __/ _ \  | |_) | |/ _` | | | |
-|  _  | (_) \ V  V /  | || (_) | |  __/| | (_| | |_| |
-|_| |_|\___/ \_/\_/    \__\___/  |_|   |_|\__,_|\__, |
-                                                |___/                                                                                   
-\n
+                print(pyfiglet.figlet_format("HOW TO PLAY!\n", font = "slant"))
+                print("""                                                                        
 1. Please enter your name and press enter.
 2. The game board is a 10 x 10 grid, each square in the grid will be repersented by number and letter(a7, c2). 
 3. Each players fleet consists of 5 vessels. These length of the ships are based on the Battleship board game.
@@ -46,19 +31,14 @@ def welcome_screen():
 5. Ships placed VERTICALLY are placed from TOP --> DOWN, ships place HORIZONTALLY are placed LEFT --> RIGHT.
 6. Enter your coordinates into the console to fire a shot. You will be notified of a hit or miss.
 7. Player and computers selections will appear on their game board to avoid selecting the same coordinates and help narrow down where ships are located.
-8. A winner is decalred when the players or computers fleet is destroyed.\n
- _                              _ 
-| |    ___  __ _  ___ _ __   __| |
-| |   / _ \/ _` |/ _ \ '_ \ / _` |
-| |__|  __/ (_| |  __/ | | | (_| |
-|_____\___|\__, |\___|_| |_|\__,_|
-        |___/                                                                
-\n
+8. A winner is decalred when the players or computers fleet is destroyed.\n""")
+
+                print(pyfiglet.figlet_format("LEGEND\n", font = "slant"))
+                print("""
 1. '.' = water or empty space
 2. 'O' = part of ship
 3. 'X' = part of ship that was hit with bullet
-4. '#' = water that was shot with bullet, a miss because it hit no ship.\n"""
-                )
+4. '#' = water that was shot with bullet, a miss because it hit no ship.\n""")
 
                 # if its p break the while loop and play the game
             elif user_prompt == "P":
