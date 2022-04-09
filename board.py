@@ -5,7 +5,6 @@ from utils import clear_console
 """
 For creating the code for the game board and logic, 
 I used the below sites for reference:
-
 Pythondex
 URL: https://pythondex.com/python-battleship-game
 
@@ -43,6 +42,7 @@ letters_to_numbers = {
     "I": 8,
     "J": 9,
 }
+
 
 # creates players game board
 def print_board(board):
@@ -302,9 +302,7 @@ The enemy's fleet is destroyed and lying on the ocean floor.\n"""
         print("PLAYERS BOARD: \n")
         print_board(COMPUTER_GUESS_BOARD)
         if hit_count(COMPUTER_GUESS_BOARD) == 17:
-            print(
-                """
-
+            print("""
  __   _____  _   _   _     ___  ____  _____   _ 
  \ \ / / _ \| | | | | |   / _ \/ ___|| ____| | |
   \ V / | | | | | | | |  | | | \___ \|  _|   | |
