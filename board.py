@@ -1,6 +1,5 @@
 import random
 import time
-from models.ship import Ship
 from utils import clear_console
 
 """
