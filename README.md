@@ -56,6 +56,19 @@ After the user selects **p** to play they game they are taking to a new screen a
 
 ![computer name](https://user-images.githubusercontent.com/79532281/162567287-8289e252-6080-49e2-87ba-d2ea68bbbaed.png)
 
+![Welcome message](https://user-images.githubusercontent.com/79532281/162592592-af5e8d04-2bb8-4fad-b422-ce89f18a05f2.png)
+
+#### Place ships
+
+The next screen allows the player to place their ships. The player is asked how they place their ships. They are asked if the want to place horizontally or vertically, to select a row between 1 - 10 and a column between A - J. The player must place their 5 ships for the game to begin. If the player selects a row or column that is not in the list the will recieve a warning message asking them to make a correct selection.
+
+![ship placement](https://user-images.githubusercontent.com/79532281/162592669-3fa9763d-5343-477b-adef-6f4e1ea2a18a.png)
+
+![ships placed on board](https://user-images.githubusercontent.com/79532281/162592645-a1fe4bbd-8955-4c6b-95e2-b196631a7673.png)
+
+#### Firing round
+
+
 ### Future Features
 
 Below are the features I would like to implement into the game when I learn more about Python:
@@ -76,7 +89,9 @@ I would like to increase the computers AI when attacking. If the computer hits t
 
 
 ## Testing 
+### PEP8
 
+I ran my code through PEP8 to check for errors in my code. I fixed the serious errors appearing and left with errors for line length being to long and whitespace. 
 ### Bugs Found
 
 **Gameboard**
@@ -93,6 +108,11 @@ This fixed the layout issue on the board and now the layout is uniformed.
 
 ![final board](https://user-images.githubusercontent.com/79532281/162246532-68e83cc1-8c80-4b4c-902d-87fa46f8e939.png)
 
+### Bugs not fixed
+
+When playing the game on Heroku I cannot clear the screen totally during the firing rounds. A bit of the old board carry over on every turn. I tried to clear the console at various points throughout the game to try and fix it but no luck with it. To solve this issue, I added a Battleship heading at the top of the boards to break up the space between the boards.
+
+![heroku bug](https://user-images.githubusercontent.com/79532281/162592570-d0e26d57-1119-4ab7-8890-fc720ccdcc62.png)
 
 ## Deployment
 
@@ -152,7 +172,12 @@ The project was deployed to Heroku using the following steps:
      * For deplyment of the live site
 
 * [Stack overflow - clear_console](https://stackoverflow.com/questions/2084508/clear-terminal-in-python)
-     * Used to create clear_console.
+     * Used to create clear_console. 
+     
+      ```
+      import os
+      os.system('cls' if os.name == 'nt' else 'clear')
+      ```
 
 * [Stack overflow - Python](https://stackoverflow.com/search?q=battleships+python&s=87361546-624c-486c-98c9-d8a5cd81f924&s=b0c77bec-adf6-4812-932e-c25b8b2cc5ed)
      * Also used Stackoverflow to get guidence on creating my code.
@@ -162,4 +187,5 @@ The project was deployed to Heroku using the following steps:
 
 * [PEP8](http://pep8online.com/)
      * Used to check code and no errors appearing.
+
 
