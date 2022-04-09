@@ -276,7 +276,6 @@ def play_game():
         while True:
             print("\n Enter a location for us to attack...\n")
             print("COMPUTERS BOARD:\n")
-
             print_board(PLAYER_GUESS_BOARD)
             turn(PLAYER_GUESS_BOARD)
             time.sleep(2)
