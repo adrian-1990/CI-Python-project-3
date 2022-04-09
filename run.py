@@ -100,7 +100,9 @@ def name_input():
 
 class Game:
     welcome_screen()
+    clear_console()
     name_input()
+    clear_console()
     play_game()
 
 
