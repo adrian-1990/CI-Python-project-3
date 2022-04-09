@@ -170,7 +170,12 @@ The project was deployed to Heroku using the following steps:
      * For deplyment of the live site
 
 * [Stack overflow - clear_console](https://stackoverflow.com/questions/2084508/clear-terminal-in-python)
-     * Used to create clear_console.
+     * Used to create clear_console. 
+     
+      ```
+      import os
+      os.system('cls' if os.name == 'nt' else 'clear')
+      ```
 
 * [Stack overflow - Python](https://stackoverflow.com/search?q=battleships+python&s=87361546-624c-486c-98c9-d8a5cd81f924&s=b0c77bec-adf6-4812-932e-c25b8b2cc5ed)
      * Also used Stackoverflow to get guidence on creating my code.
