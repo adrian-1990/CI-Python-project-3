@@ -86,9 +86,9 @@ def name_input():
         value = input("Please enter your name:\n")
 
         if value == "computer":
-            print("That is my name human!!! Please enter your own name: \n")
+            print("That is my name human!!! Please enter your own name... \n")
         elif len(value) == 0:
-            print("I appreciate the secrecy but I must know your name...")
+            print("I appreciate the secrecy but I must know your name...\n")
         else:
             user_name = value
     print("Welcome " + user_name + ", the game is about to begin...\n")
