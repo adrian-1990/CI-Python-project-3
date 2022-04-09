@@ -267,6 +267,7 @@ def play_game():
     print_board(PLAYER_BOARD)
     # Place ships on the players board
     place_ship(PLAYER_BOARD)
+    clear_console()
 
     while True:
         # Player turn
@@ -279,7 +280,6 @@ def play_game():
             print("\nEnter a location for us to attack...\n")
             turn(PLAYER_GUESS_BOARD)
             time.sleep(2)
-            clear_console()
             break
         # the total SHIPS_LENGTH = 17, when hit_count reaches this declare game winner
         if hit_count(PLAYER_GUESS_BOARD) == 17:
