@@ -50,8 +50,9 @@ This gives the user a description of what each icon means on the game board so w
 
 After the user selects **p** to play they game they are taking to a new screen and asked to enter their name. The player must enter a name or else they will get the below warning message. The player also cannot enter **computer** as their user name as the computer knows this is their name and won't let anybody steal it.
 
+![no name entered](https://user-images.githubusercontent.com/79532281/162567284-814fe4b5-3be6-491c-98c5-e93bc8883ffc.png)
 
-
+![computer name](https://user-images.githubusercontent.com/79532281/162567287-8289e252-6080-49e2-87ba-d2ea68bbbaed.png)
 
 ### Future Features
 
