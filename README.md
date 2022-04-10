@@ -89,9 +89,20 @@ I would like to increase the computers AI when attacking. If the computer hits t
 
 
 ## Testing 
+
 ### PEP8
 
-I ran my code through PEP8 to check for errors in my code. I fixed the serious errors appearing and left with errors for line length being to long and whitespace. 
+I ran my code through PEP8 to check for errors in my code. On my run.py I was able to fix al errors appearing and now passes with no issues. For board.py there are line length errors appearing, this is for code and I do not know how to rewrite the code to reduce line length so unfortinitly the errors are still appearing.
+
+**run.py**
+
+![run py PEP8](https://user-images.githubusercontent.com/79532281/162608609-25eadd62-3cb8-4564-888a-ca4a1d755de7.png)
+
+**board.py**
+
+![board py PEP8](https://user-images.githubusercontent.com/79532281/162608642-7aca4d2d-485e-473d-bdba-98f636066ebd.png)
+
+
 ### Bugs Found
 
 **Gameboard**
