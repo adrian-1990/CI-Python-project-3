@@ -42,7 +42,7 @@ When planning the game I created a flow chart to get an understanding of how I w
 When the player opens the site they are greated with the games header and below text asking do they want to play the game(p) or instructions on the games(i)
 If the player selects **p** they are taking to a new screen and asked to input their name. If the select **i** they are taken to a new screen and the games rules and game legend are displayed.
 
-![home screen](https://user-images.githubusercontent.com/79532281/162566809-a3d2e585-8a8e-4c59-91b2-ea0ae7ced5f7.png)
+![NEW HOMESCREEN](https://user-images.githubusercontent.com/79532281/162620045-13de0676-9f5c-48b9-91fd-b2b18667c3c5.png)
 
 #### Instructions screen.
 
@@ -50,13 +50,14 @@ If the player selects **p** they are taking to a new screen and asked to input t
 
 On this screen the user is shown the steps needed to play the game, how to place their battleships, if they hit or miss and finally how you win the game. 
 
-![how to play](https://user-images.githubusercontent.com/79532281/162566884-67594775-1ec3-47a2-83be-ca0a3086a935.png)
+![NEW HOW TO PLAY](https://user-images.githubusercontent.com/79532281/162620054-0b64809d-d671-4b07-b544-6190cf7d5623.png)
 
 **Legend**
 
 This gives the user a description of what each icon means on the game board so when they play the game they can understand what they are looking at.
 
-![Legend](https://user-images.githubusercontent.com/79532281/162566938-8748688e-1387-4813-a228-21e07d0f9eb1.png)
+![NEW LEGEND](https://user-images.githubusercontent.com/79532281/162620062-888c6261-4715-4d21-95ac-238cfad6eae5.png)
+
 
 #### Welcome Message
 
