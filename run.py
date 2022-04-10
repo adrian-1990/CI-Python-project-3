@@ -30,13 +30,13 @@ def welcome_screen():
 3. Each square in the grid will be repersented by number and letter(a7, c2).
 4. Each players fleet consists of 5 vessels and based on the board game fleets.
 5. The player must position the location of their ships,
-the computers board will be generated automatically.
+   the computers board will be generated automatically.
 6. Ships placed VERTICALLY are placed from TOP --> DOWN,
-ships place HORIZONTALLY are placed LEFT --> RIGHT.
+   ships place HORIZONTALLY are placed LEFT --> RIGHT.
 7. Enter coordinates into the console to fire a shot,
-You will be notified of a hit or miss.
+   You will be notified of a hit or miss.
 8. Player and computers selections will appear on their game board,
-to avoid selecting the same coordinates and help narrow down ships position.
+   to avoid selecting the same coordinates and help narrow down ships position.
 9. A winner is decalred when the players or computers fleet is destroyed.\n"""
                 )
 
