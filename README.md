@@ -173,9 +173,6 @@ The project was deployed to Heroku using the following steps:
 * [Black Playground](https://black.readthedocs.io/en/latest/)
      * I used Black Playground to ensure my code was indented correct to meet PEP8 standards.
 
-* [Patorjk](https://patorjk.com/software/taag/#p=display&f=Ivrit&t=Battleships)
-     * To create the headers used for Battleship and instructions menu.
-
 * [Lucid](https://lucid.co/)
      * I used Lucid to create my Flowchart.
 
