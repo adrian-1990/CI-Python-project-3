@@ -1,12 +1,12 @@
 # Battleships
 
-This is based on the classic boardgame of the same name. The player will challenge the computer in a head to head game and whoever destoy their opponents fleet wins.
+This is based on the classic boardgame Battleship. The player will challenge the computer in a head to head game and whoever destoys their opponents fleet wins.
 
 Players must place their ships manually on the game board, the computers game board is automatically created and hidden from the player. 
 
 When all boards are ready the battle begins, a players guesses board is displayed showing their previous guesses and the players board is also shown.
 
-The ste is created using Python and displays the skills i have learnt during the Pythonmodule.
+The ste is created using Python and displays the skills I have learnt during the Python module.
 
 ### Live site
 
@@ -21,8 +21,8 @@ Please see my live site below, this was deployed using [Heroku](https://id.herok
 **First Time Visitors**
 
 * I want to be able to learn the games rules.
-* I want all instruction to be clearly visible to the user to all easy site navigation.
-* I want game boards to be visible so I can easily follow game choices for player and computer.
+* I want all instruction to be clearly visible to the user to allow easy site navigation.
+* I want the game boards to be visible so I can easily follow game choices for player and computer.
 
 **Return User**
 
@@ -30,7 +30,7 @@ Please see my live site below, this was deployed using [Heroku](https://id.herok
 
 ### Planning
 
-When planning the game I created a flow chart to get an understanding of how I wanted my game to work using OOP. This was created to get a basic flow of the games logic and during the development of the game I relaised I needed more functions to solve the bugs I was encountering.
+When planning the game I created a flow chart to get an understanding of how I wanted my game to work using OOP, this was created to get a basic flow of the games logic. During the development of the game I relaised I needed more functions to solve the bugs I was encountering.
 
 ![Flowchart](https://user-images.githubusercontent.com/79532281/162234360-0594996b-f696-4f2a-8ea8-c2c9f578598d.png)
 
@@ -40,7 +40,7 @@ When planning the game I created a flow chart to get an understanding of how I w
 #### Arrival Menu
 
 When the player opens the site they are greated with the games header and below text asking do they want to play the game(p) or instructions on the games(i)
-If the player selects **p** they are taking to a new screen and asked to input their name. If the select **i** they are taken to a new screen and the games rules and game legend are displayed.
+If the player selects **p** they are taken to a new screen and asked to input their name. If they select **i** they are taken to a new screen and the games rules and game legend are displayed.
 
 ![NEW HOMESCREEN](https://user-images.githubusercontent.com/79532281/162620045-13de0676-9f5c-48b9-91fd-b2b18667c3c5.png)
 
@@ -61,7 +61,7 @@ This gives the user a description of what each icon means on the game board so w
 
 #### Welcome Message
 
-After the user selects **p** to play they game they are taking to a new screen and asked to enter their name. The player must enter a name or else they will get the below warning message. The player also cannot enter **computer** as their user name as the computer knows this is their name and won't let anybody steal it.
+After the user selects **p** to play the game they are taken to a new screen and asked to enter their name. The player must enter a name or else they will get the below warning message. The player cannot enter **computer** as their user name as the computer knows this is their name and won't let anybody steal it.
 
 ![no name entered](https://user-images.githubusercontent.com/79532281/162567284-814fe4b5-3be6-491c-98c5-e93bc8883ffc.png)
 
@@ -71,7 +71,7 @@ After the user selects **p** to play they game they are taking to a new screen a
 
 #### Place ships
 
-The next screen allows the player to place their ships. The player is asked how they place their ships. They are asked if the want to place horizontally or vertically, to select a row between 1 - 10 and a column between A - J. The player must place their 5 ships for the game to begin. If the player selects a row or column that is not in the list the will recieve a warning message asking them to make a correct selection.
+The next screen allows the player to place their ships. The player is asked how they would like to place their ships. They are asked if the want to place horizontally or vertically, to select a row between 1 - 10 and a column between A - J. The player must place their 5 ships for the game to begin. If the player selects a row or column that is not in the list the will recieve a warning message asking them to make a correct selection.
 
 ![ship placement](https://user-images.githubusercontent.com/79532281/162592669-3fa9763d-5343-477b-adef-6f4e1ea2a18a.png)
 
@@ -81,14 +81,14 @@ The next screen allows the player to place their ships. The player is asked how 
 
 When the user has their ships placed we are taken to the firing screen. This is where the main part of the game takes place. 
 
-The user will always go first and will be asked to input a row then column to attack. They will be notified if they have hit an enemy vessel or it's a miss. The computer will then counter attack, the player will be notified that the computer is taking aim and if they have struck a players vessel or missed.
+The user will always go first and will be asked to input a row and column to attack. They will be notified if they have hit an enemy vessel or if it's a miss. The computer will then counter attack, the player will be notified that the computer is taking aim and if they have struck a players vessel or missed.
 
 ![attack computers board](https://user-images.githubusercontent.com/79532281/162619767-b8315b0d-be88-45b0-a870-87d2f9e9ebe4.png)
 
 ![computers turn](https://user-images.githubusercontent.com/79532281/162619803-a1eff59e-df59-49d7-a4c6-36cd7fdee288.png)
 
 
-The players gameboard and computers game board will be updated with the last guesses. They will help the player to narrow down where vessels are located, if they hit the computers vessel they will know the areas around to attack and also let the player know how close the computer is to sinking their fleet.
+The players gameboard and computers gameboard will be updated with the last guesses. This will help the player to narrow down where vessels are located, if they hit the computers vessel they will know the areas around to attack and will also know how close the computer is to sinking their fleet.
 
 ![player board with computer guess](https://user-images.githubusercontent.com/79532281/162620794-423d54ac-062c-4424-90f4-6ef41ffec327.png)
 
@@ -96,7 +96,7 @@ The players gameboard and computers game board will be updated with the last gue
 
 #### Winner Screen 
 
-When the player or computers fleet is destroyed you are taking to the winner screen. This will notify the player if they won or if they lost and their fleet is destroyed.
+When the player or computers fleet is destroyed you are taken to the winners screen. This will notify the player if they have won or if they have lost and their fleet is destroyed.
 
 ![winner message](https://user-images.githubusercontent.com/79532281/162621586-abde4842-daa6-463a-b3fb-8e58cfc81388.png)
 
@@ -106,15 +106,15 @@ Below are the features I would like to implement into the game when I learn more
 
 **Display ships on board**
 
-I would like to discplay an icon for each ship to appear on the gameboard, for example if the ship is a Carrier then C would appear on the board and would appear over 5 spaces to match the vessel length. After a ship is sunk I would like a message to appear letting you know ship type sunk, "Well done, you have sunk {ship.type}"
+I would like to discplay an icon for each ship to appear on the gameboard, for example if the ship is a Carrier then C would appear on the board and would appear over 5 spaces to match the vessel length. After a ship is sunk I would like a message to appear letting you know the ship type sunk- "Well done, you have sunk {ship.type}"
 
 **Display Gameboards Side by Side**
 
-I would like for the gameboards to appear side by side. This will stop the user from having to scroll up to look at the game board where the computer has attacked and provide a better UX.
+I would like for the gameboards to appear side by side. This would stop the user from having to scroll up to look at the game board where the computer has attacked and provide a better UX.
 
 **Better computer AI**
 
-I would like to increase the computers AI when attacking. If the computer hits the players board, I would then like the computer to attack the positions around the hit until they sink a ship. Currently if the computer gets a hit, it's next attack is a random position. This will make games more challenging for the players and improve the UX.
+I would like to increase the computers AI when attacking. If the computer hits the players board, I would then like the computer to attack the positions around the hit until they sink a ship. Currently if the computer gets a hit, it's next attack is a random position. This would make games more challenging for the players and improve the UX.
 
 ## Technologies Used
 
@@ -139,7 +139,7 @@ Below is a list of the Languages, Modules and Packages used to create the projec
 
 ### PEP8
 
-I ran my code through PEP8 to check for errors in my code. The main errors appearing was trailing whitespace and exceeding line length, this was mainly caused by the headers in my game. I installed [Pyfiglet](https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/#:~:text=pyfiglet%20takes%20ASCII%20text%20and,pyfiglet%20module%20%3A%20pip%20install%20pyfiglet) to be able to rewrite my headers into a single line of code and this solved the majority of errors appearing. On my run.py I was able to fix al errors appearing and now passes with no issues. For board.py there are line length errors appearing, this is for code and I do not know how to rewrite the code to reduce line length so unfortinitly the errors are still appearing.
+I ran my code through PEP8 to check for errors in my code. The main errors appearing was trailing whitespace and exceeding line length, this was mainly caused by the headers in my game. I installed [Pyfiglet](https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/#:~:text=pyfiglet%20takes%20ASCII%20text%20and,pyfiglet%20module%20%3A%20pip%20install%20pyfiglet) so that I could rewrite my headers into a single line of code and this solved the majority of errors appearing. On my run.py I was able to fix all errors appearing and it now passes with no issues. For board.py there are line length errors appearing, this is for working code and I do not know how to rewrite the code to reduce line length so unfortunately the errors are still appearing.
 
 **run.py**
 
@@ -154,7 +154,7 @@ I ran my code through PEP8 to check for errors in my code. The main errors appea
 
 **Gameboard**
 
-When creating the gameboard I came across the below bug. The bottom row of the grid was out of sequence with the rest of the board and didn't provide the positive UX.
+When creating the gameboard I came across the below bug. The bottom row of the grid was out of sequence with the rest of the board and didn't provide a positive UX.
 
 ![game board bug](https://user-images.githubusercontent.com/79532281/162245500-1682d231-52fb-4529-801e-e27d2535cd6b.png)
 
@@ -168,7 +168,7 @@ This fixed the layout issue on the board and now the layout is uniformed.
 
 ### Bugs not fixed
 
-When playing the game on Heroku I cannot clear the screen totally during the firing rounds. A bit of the old board carry over on every turn. I tried to clear the console at various points throughout the game to try and fix it but no luck with it. To solve this issue, I added a Battleship heading at the top of the boards to break up the space between the boards.
+When playing the game on Heroku I cannot clear the screen totally during the firing rounds. A bit of the old board carries over on every turn. I tried to clear the console at various points throughout the game to try and fix it but had no luck with it. To solve this issue, I added a Battleship heading at the top of the boards to break up the space between the boards.
 
 ![heroku bug](https://user-images.githubusercontent.com/79532281/162592570-d0e26d57-1119-4ab7-8890-fc720ccdcc62.png)
 
