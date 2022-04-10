@@ -16,7 +16,17 @@ Please see my live site below, this was deployed using [Heroku](https://id.herok
 
 ## User Experience (UX)
 
-**User Stories**
+### User stories
+
+**First Time Visitors**
+
+* I want to be able to learn the games rules.
+* I want all instruction to be clearly visible to the user to all easy site navigation.
+* I want game boards to be visible so I can easily follow game choices for player and computer.
+
+**Return User**
+
+* I can start a game straight away without having to go through games rules to start.
 
 ### Planning
 
@@ -66,7 +76,18 @@ The next screen allows the player to place their ships. The player is asked how 
 
 ![ships placed on board](https://user-images.githubusercontent.com/79532281/162592645-a1fe4bbd-8955-4c6b-95e2-b196631a7673.png)
 
-#### Firing round
+#### Firing Round
+
+When the user has their ships placed we are taken to the firing screen. This is where the main part of the game takes place. 
+
+The user will always go first and will be asked to input a row then column to attack. They will be notified if they have hit an enemy vessel or it's a miss. The computer will then counter attack, the player will be notified that the computer is taking aim and if they have struck a players vessel or missed.
+
+![attack computers board](https://user-images.githubusercontent.com/79532281/162619767-b8315b0d-be88-45b0-a870-87d2f9e9ebe4.png)
+
+![computers turn](https://user-images.githubusercontent.com/79532281/162619803-a1eff59e-df59-49d7-a4c6-36cd7fdee288.png)
+
+
+The players gameboard and computers game board will be updated with the last guesses. They will help the player to narrow down where vessels are located, if they hit the computers vessel they will know the areas around to attack and also let the player know how close the computer is to sinking their fleet.
 
 
 ### Future Features
