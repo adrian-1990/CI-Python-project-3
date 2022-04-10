@@ -10,7 +10,7 @@ def welcome_screen():
     Opening screen to the game
     """
     clear_console()
-    print(pyfiglet.figlet_format("BATTLESHIPS", font = "slant"))
+    print(pyfiglet.figlet_format("BATTLESHIPS", font="slant"))
 
     while True:
         try:
@@ -22,23 +22,32 @@ def welcome_screen():
 
             if user_prompt == "I":
                 clear_console()
-                print(pyfiglet.figlet_format("HOW TO PLAY!\n", font = "slant"))
-                print("""                                                                        
+                print(pyfiglet.figlet_format("HOW TO PLAY!\n", font="slant"))
+                print(
+                    """
 1. Please enter your name and press enter.
-2. The game board is a 10 x 10 grid, each square in the grid will be repersented by number and letter(a7, c2). 
-3. Each players fleet consists of 5 vessels. These length of the ships are based on the Battleship board game.
-4. The player must position the location of their ships, the computers board will be generated automatically.
-5. Ships placed VERTICALLY are placed from TOP --> DOWN, ships place HORIZONTALLY are placed LEFT --> RIGHT.
-6. Enter your coordinates into the console to fire a shot. You will be notified of a hit or miss.
-7. Player and computers selections will appear on their game board to avoid selecting the same coordinates and help narrow down where ships are located.
-8. A winner is decalred when the players or computers fleet is destroyed.\n""")
+2. The game board is a 10 x 10 grid.
+3. Each square in the grid will be repersented by number and letter(a7, c2).
+4. Each players fleet consists of 5 vessels and based on the board game fleets.
+5. The player must position the location of their ships,
+   the computers board will be generated automatically.
+6. Ships placed VERTICALLY are placed from TOP --> DOWN,
+   ships place HORIZONTALLY are placed LEFT --> RIGHT.
+7. Enter coordinates into the console to fire a shot,
+   You will be notified of a hit or miss.
+8. Player and computers selections will appear on their game board,
+   to avoid selecting the same coordinates and help narrow down ships position.
+9. A winner is decalred when the players or computers fleet is destroyed.\n"""
+                )
 
-                print(pyfiglet.figlet_format("LEGEND\n", font = "slant"))
-                print("""
+                print(pyfiglet.figlet_format("LEGEND\n", font="slant"))
+                print(
+                    """
 1. '.' = water or empty space
 2. 'O' = part of ship
 3. 'X' = part of ship that was hit with bullet
-4. '#' = water that was shot with bullet, a miss because it hit no ship.\n""")
+4. '#' = water that was shot with bullet, a miss because it hit no ship.\n"""
+                )
 
                 # if its p break the while loop and play the game
             elif user_prompt == "P":
@@ -71,7 +80,8 @@ def name_input():
     print("This is based on the classic Battlefield board game...\n")
     time.sleep(2)
     print(
-        "You must first place your ships, make sure to choose well as we don't want your fleet to be sunk...\n"
+        """You must first place your ships,\n
+       make sure to choose well as we don't want your fleet to be sunk...\n"""
     )
     time.sleep(2)
     print("Computers board is loaded, hope you enjoy the game...\n")
@@ -86,3 +96,4 @@ class Game:
 
 
 Game()
+
