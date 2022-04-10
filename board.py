@@ -4,11 +4,10 @@ import pyfiglet
 from utils import clear_console
 
 """
-For creating the code for the game board and logic, 
+For creating the code for the game board and logic,
 I used the below sites for reference:
 Pythondex
 URL: https://pythondex.com/python-battleship-game
-
 How to code Battlefield game in Python Youtube video:
 https://www.youtube.com/watch?v=tF1WRCrd_HQ
 """
@@ -51,7 +50,7 @@ def print_board(board):
     print("   +-+-+-+-+-+-+-+-+-+")
     row_number = 1
     for row in board:
-        # for row_number less than 10 add spacing, this fixed alignment issue with board
+        # for row_number less than 10 add spacing, fixed alignment on board
         print("%s%d|%s|" % (" " if row_number < 10 else "", row_number, "|".join(row)))
         row_number += 1
 
@@ -143,15 +142,15 @@ def ship_overlap(board, row, column, orientation, ship_length):
 
 def user_input(place_ship):
     """
-    The user_input function takes the coordinates entered by the player to place the users ships
-    User must select if the want to place horizontal or vertical, then row / column
+    user_input function takes the coordinates entered to place the users ships
+    User selects if the want to place horizontal / vertical, then row / column
     Computers ships are randomly place onto their board.
     """
     if place_ship == True:
         while True:
             try:
                 orientation = input(
-                    "Do you want to place the ship Horizontal(H) or Vertical(V): \n"
+                   "Do you want to place the ship Horizontal(H) or Vertical(V): \n"
                 ).upper()
                 if orientation == "H" or orientation == "V":
                     break
@@ -173,7 +172,7 @@ def user_input(place_ship):
                 print("Please enter a valid letter between 1-10\n")
         while True:
             try:
-                column = input("Enter the column of the ship (A-J): \n").upper()
+                column = input("Enter the column of the ship (A-J):\n").upper()
                 if column not in "ABCDEFGHIJ":
                     print("Please enter a valid letter between A-J\n")
                 else:
@@ -195,7 +194,7 @@ def user_input(place_ship):
                 print("Please enter a valid letter between 1-10\n")
         while True:
             try:
-                column = input("Enter the column of the ship (A-J): \n").upper()
+                column = input("Enter the column of the ship (A-J):\n").upper()
                 if column not in "ABCDEFGHIJ":
                     print("Please enter a valid letter between A-J\n")
                 else:
@@ -232,7 +231,7 @@ def turn(board):
             turn(board)
         elif COMPUTER_BOARD[row][column] == "O":
             board[row][column] = "X"
-            print("It's a hit, keep it up and we will soon have their fleet sunk!!\n")
+            print("It's a hit, let's keep up the attack!!!!\n")
             time.sleep(2)
         else:
             board[row][column] = "#"
@@ -274,7 +273,7 @@ def play_game():
         # Player turn
         while True:
             clear_console()
-            print(pyfiglet.figlet_format("BATTLESHIPS", font = "digital"))
+            print(pyfiglet.figlet_format("BATTLESHIPS", font="digital"))
             print("PLAYERS BOARD:\n")
             print_board(COMPUTER_GUESS_BOARD)
             print("\nCOMPUTERS BOARD:\n")
@@ -283,10 +282,10 @@ def play_game():
             turn(PLAYER_GUESS_BOARD)
             time.sleep(2)
             break
-        # the total SHIPS_LENGTH = 17, when hit_count reaches this declare game winner
+        # total SHIPS_LENGTH = 17, when hit_countr = 17 a winner is declared
         if hit_count(PLAYER_GUESS_BOARD) == 17:
             clear_console()
-            print(pyfiglet.figlet_format("YOU WIN!\n", font = "slant"))
+            print(pyfiglet.figlet_format("YOU WIN!\n", font="slant"))
             print("The enemy's fleet is destroyed and lying on the ocean floor.\n")
             break
         # Computer turn
@@ -296,6 +295,8 @@ def play_game():
             break
         if hit_count(COMPUTER_GUESS_BOARD) == 17:
             clear_console()
-            print(pyfiglet.figlet_format("YOU LOSE!\n", font = "slant"))
-            print("Your fleet has been destroyed, as Captain you must go down with the ship...\n")
+            print(pyfiglet.figlet_format("YOU LOSE!\n", font="slant"))
+            print(
+                "Your fleet has been destroyed, as Captain you must go down with the ship...\n"
+            )
             break
