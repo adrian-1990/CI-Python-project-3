@@ -98,6 +98,8 @@ The players gameboard and computers game board will be updated with the last gue
 
 When the player or computers fleet is destroyed you are taking to the winner screen. This will notify the player if they won or if they lost and their fleet is destroyed.
 
+![winner message](https://user-images.githubusercontent.com/79532281/162621586-abde4842-daa6-463a-b3fb-8e58cfc81388.png)
+
 ### Future Features
 
 Below are the features I would like to implement into the game when I learn more about Python:
@@ -115,6 +117,22 @@ I would like for the gameboards to appear side by side. This will stop the user 
 I would like to increase the computers AI when attacking. If the computer hits the players board, I would then like the computer to attack the positions around the hit until they sink a ship. Currently if the computer gets a hit, it's next attack is a random position. This will make games more challenging for the players and improve the UX.
 
 ## Technologies Used
+
+Below is a list of the Languages, Modules and Packages used to create the project.
+
+* [Python](https://www.python.org/)
+
+* [OS](https://docs.python.org/3/library/os.html)
+
+* [Time](https://docs.python.org/3/library/time.html)
+
+* [Random](https://docs.python.org/3/library/random.html)
+
+* [Pyfiglet](https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/)
+
+* [Git](https://git-scm.com/)
+
+* [Github](https://github.com/adrian-1990/CI-Python-project-3)
 
 
 ## Testing 
