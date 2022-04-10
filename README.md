@@ -90,6 +90,13 @@ The user will always go first and will be asked to input a row then column to at
 
 The players gameboard and computers game board will be updated with the last guesses. They will help the player to narrow down where vessels are located, if they hit the computers vessel they will know the areas around to attack and also let the player know how close the computer is to sinking their fleet.
 
+![player board with computer guess](https://user-images.githubusercontent.com/79532281/162620794-423d54ac-062c-4424-90f4-6ef41ffec327.png)
+
+![sunk ship](https://user-images.githubusercontent.com/79532281/162620803-5b3b6480-c209-42e9-a955-051104213846.png)
+
+#### Winner Screen 
+
+When the player or computers fleet is destroyed you are taking to the winner screen. This will notify the player if they won or if they lost and their fleet is destroyed.
 
 ### Future Features
 
@@ -163,8 +170,6 @@ When playing the game on Heroku I cannot clear the screen totally during the fir
      
      ![git clone 3](https://user-images.githubusercontent.com/79532281/162243138-b50b3fa1-2030-4c97-991b-fd4c447721cd.png)
 
-
-
 ### Deploying to Heroku
 
 The project was deployed to Heroku using the following steps:
@@ -188,7 +193,6 @@ The project was deployed to Heroku using the following steps:
 10. Once the repository is found click 'Connect'.
 11. At the bottom of the page find the section named 'Manual deploy', select the 'main' branch in the drop down and click the 'Deploy' button.
 12. Once deployment is complete, click the 'View' button to load the URL of the deployed application.
-
 
 ## Credits
 
