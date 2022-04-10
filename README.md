@@ -92,7 +92,7 @@ I would like to increase the computers AI when attacking. If the computer hits t
 
 ### PEP8
 
-I ran my code through PEP8 to check for errors in my code. On my run.py I was able to fix al errors appearing and now passes with no issues. For board.py there are line length errors appearing, this is for code and I do not know how to rewrite the code to reduce line length so unfortinitly the errors are still appearing.
+I ran my code through PEP8 to check for errors in my code. The main errors appearing was trailing whitespace and exceeding line length, this was mainly caused by the headers in my game. I installed [Pyfiglet](https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/#:~:text=pyfiglet%20takes%20ASCII%20text%20and,pyfiglet%20module%20%3A%20pip%20install%20pyfiglet) to be able to rewrite my headers into a single line of code and this solved the majority of errors appearing. On my run.py I was able to fix al errors appearing and now passes with no issues. For board.py there are line length errors appearing, this is for code and I do not know how to rewrite the code to reduce line length so unfortinitly the errors are still appearing.
 
 **run.py**
 
